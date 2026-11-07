@@ -1,0 +1,13 @@
+[book]
+title = "Voxalfa documentation"
+authors = ["luckasRanarison"]
+language = "en"
+
+[output.html]
+default-theme = "rust"
+preferred-dark-theme = "rust"
+git-repository-url = "https://github.com/voxalfa/voxalfa-docs"
+
+[preprocessor.tsitter.languages.voxalfa]
+git = "https://github.com/voxalfa/voxalfa"
+location = "tree-sitter-voxalfa"
