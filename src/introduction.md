@@ -33,4 +33,4 @@ Below is a simple Voxalfa score illustrating how metadata, per voice lyrics, and
 ```
 
 
-Voxalfa is still in early development. Syntax and features may change before the first stable release. It is open-source and available on [GitHub](https://voxalfa/voxalfa).
+Voxalfa is still in early development. Syntax and features may change before the first stable release. It is open-source and available on [GitHub](https://github.com/voxalfa/voxalfa).
