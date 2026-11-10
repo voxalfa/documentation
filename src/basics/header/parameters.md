@@ -2,12 +2,12 @@
 
 Initial parameters use the `[$]` marker and control how the score is played. They may only appear in the header.
 
-| Parameter | Type | Description |
-| --- | --- | --- |
-| `key` | key | Initial [key signature](../data-types.md#keys). |
-| `time` | number list of length 2 | Time signature, for example `{4,4}`. |
-| `tempo` | static tempo | Initial [tempo](../data-types.md#tempos) name or BPM value. |
-| `voices` | voice list | [Voices](../data-types.md#voices) available in the body. |
+| Parameter | Type                    | Description                                                 |
+| --------- | ----------------------- | ----------------------------------------------------------- |
+| `key`     | key                     | Initial [key signature](../data-types.md#keys).             |
+| `time`    | number list of length 2 | Time signature, for example `{4,4}`.                        |
+| `tempo`   | static tempo            | Initial [tempo](../data-types.md#tempos) name or BPM value. |
+| `voices`  | voice list              | [Voices](../data-types.md#voices) available in the body.    |
 
 `time` and `voices` are required when the body contains solfa lines.
 

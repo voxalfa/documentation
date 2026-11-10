@@ -26,13 +26,13 @@ Only the last `@page` directive is used. Options omitted from it are not inherit
 
 Page options:
 
-| Option | Description |
-| --- | --- |
-| `width` | Page width. Must be positive. |
-| `height` | Page height. Must be positive. |
-| `margin` | Margin on all sides. |
-| `margin-top`, `margin-right`, `margin-bottom`, `margin-left` | Individual margins. |
-| `margin-x`, `margin-y` | Horizontal or vertical margins. |
+| Option                                                       | Description                     |
+| ------------------------------------------------------------ | ------------------------------- |
+| `width`                                                      | Page width. Must be positive.   |
+| `height`                                                     | Page height. Must be positive.  |
+| `margin`                                                     | Margin on all sides.            |
+| `margin-top`, `margin-right`, `margin-bottom`, `margin-left` | Individual margins.             |
+| `margin-x`, `margin-y`                                       | Horizontal or vertical margins. |
 
 ## Element styles
 
@@ -47,40 +47,40 @@ Element directives control typography and spacing for a specific part of the ren
 
 Element directives:
 
-| Directive | Target |
-| --- | --- |
-| `title-text` | Score title. |
-| `author-text` | Author line. |
-| `composer-text` | Composer line. |
-| `key-text` | Key signature text. |
-| `time-text` | Time signature text. |
-| `meter-text` | Meter text. |
-| `note-text` | Solfa note text. |
-| `octave-text` | Octave numbers. |
-| `lyrics-text` | Lyrics. |
-| `divider-text` | Dividers and barlines. |
-| `page-number-text` | Page numbers. |
-| `key-label` | Key label. |
-| `time-label` | Time label. |
-| `tempo-label` | Named tempo label, such as `allegro`. |
-| `bpm-label` | Numeric tempo mark, such as `M. 120`. |
-| `jump-label` | Jump label. |
-| `mark-label` | Mark label. |
-| `dynamic-label` | Dynamic label. |
-| `volta-label` | Volta label. |
+| Directive          | Target                                |
+| ------------------ | ------------------------------------- |
+| `title-text`       | Score title.                          |
+| `author-text`      | Author line.                          |
+| `composer-text`    | Composer line.                        |
+| `key-text`         | Key signature text.                   |
+| `time-text`        | Time signature text.                  |
+| `meter-text`       | Meter text.                           |
+| `note-text`        | Solfa note text.                      |
+| `octave-text`      | Octave numbers.                       |
+| `lyrics-text`      | Lyrics.                               |
+| `divider-text`     | Dividers and barlines.                |
+| `page-number-text` | Page numbers.                         |
+| `key-label`        | Key label.                            |
+| `time-label`       | Time label.                           |
+| `tempo-label`      | Named tempo label, such as `allegro`. |
+| `bpm-label`        | Numeric tempo mark, such as `M. 120`. |
+| `jump-label`       | Jump label.                           |
+| `mark-label`       | Mark label.                           |
+| `dynamic-label`    | Dynamic label.                        |
+| `volta-label`      | Volta label.                          |
 
 ### Element properties
 
-| Property | Value | Description |
-| --- | --- | --- |
-| `font-family` | string | Font family. |
-| `font-size` | number | Font size. Must be positive. |
-| `font-style` | `"normal"` or `"italic"` | Font style. |
-| `font-stretch` | string | `ultra-condensed`, `extra-condensed`, `condensed`, `semi-condensed`, `normal`, `semi-expanded`, `expanded`, `extra-expanded`, or `ultra-expanded`. |
-| `font-weight` | string | `thin`, `extra-light`, `light`, `normal`, `medium`, `semibold`, `bold`, `extra-bold`, or `black`. |
-| `color` | string | Text color. |
-| `margin` | number | Margin on all sides. |
-| `padding` | number | Padding on all sides. |
+| Property       | Value                    | Description                                                                                                                                        |
+| -------------- | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `font-family`  | string                   | Font family.                                                                                                                                       |
+| `font-size`    | number                   | Font size. Must be positive.                                                                                                                       |
+| `font-style`   | `"normal"` or `"italic"` | Font style.                                                                                                                                        |
+| `font-stretch` | string                   | `ultra-condensed`, `extra-condensed`, `condensed`, `semi-condensed`, `normal`, `semi-expanded`, `expanded`, `extra-expanded`, or `ultra-expanded`. |
+| `font-weight`  | string                   | `thin`, `extra-light`, `light`, `normal`, `medium`, `semibold`, `bold`, `extra-bold`, or `black`.                                                  |
+| `color`        | string                   | Text color.                                                                                                                                        |
+| `margin`       | number                   | Margin on all sides.                                                                                                                               |
+| `padding`      | number                   | Padding on all sides.                                                                                                                              |
 
 Margin and padding also accept side modifiers: `-top`, `-right`, `-bottom`, `-left`, `-x`, and `-y`.
 

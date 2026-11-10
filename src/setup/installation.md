@@ -1,6 +1,6 @@
 # Installation
 
-The command-line tool is named `voxalfa`. It provides formatting, validation, and conversion to MIDI, SVG, and PDF.
+The `voxalfa` command-line tool provides formatting, validation, and conversion to MIDI, SVG, and PDF.
 
 Voxalfa is currently experimental. There is no stable release yet; only nightly builds are available.
 
@@ -8,12 +8,12 @@ Voxalfa is currently experimental. There is no stable release yet; only nightly 
 
 Prebuilt binaries are published under the [`nightly` release](https://github.com/voxalfa/voxalfa/releases/tag/nightly):
 
-| Platform | Asset |
-| --- | --- |
-| Linux x86-64 | `voxalfa-linux-x86_64` |
-| macOS Intel | `voxalfa-macos-x86_64` |
-| macOS Apple Silicon | `voxalfa-macos-arm64` |
-| Windows x86-64 | `voxalfa-windows-x86_64.exe` |
+| Platform            | Asset                        |
+| ------------------- | ---------------------------- |
+| Linux x86-64        | `voxalfa-linux-x86_64`       |
+| macOS Intel         | `voxalfa-macos-x86_64`       |
+| macOS Apple Silicon | `voxalfa-macos-arm64`        |
+| Windows x86-64      | `voxalfa-windows-x86_64.exe` |
 
 Download the binary for your platform, make it executable if necessary, and place it somewhere on your `PATH`.
 
@@ -51,14 +51,14 @@ voxalfa --help
 
 ## Command overview
 
-| Command | Description |
-| --- | --- |
-| `voxalfa check <files>` | Validate partitions and print diagnostics. |
-| `voxalfa format <files>` | Format partitions in place. |
-| `voxalfa format --check <files>` | Check whether files are already formatted. |
-| `voxalfa midi <files>` | Convert partitions to MIDI files. |
-| `voxalfa svg <files>` | Render partitions to SVG pages. |
-| `voxalfa pdf <files>` | Render partitions to PDF. |
+| Command                                 | Description                                |
+| --------------------------------------- | ------------------------------------------ |
+| `voxalfa check <files>`                 | Validate partitions and print diagnostics. |
+| `voxalfa format <files>`                | Format partitions in place.                |
+| `voxalfa format --check <files>`        | Check whether files are already formatted. |
+| `voxalfa midi <files>`                  | Convert partitions to MIDI files.          |
+| `voxalfa svg <files>`                   | Render partitions to SVG pages.            |
+| `voxalfa pdf <files>`                   | Render partitions to PDF.                  |
 | `voxalfa lyrics --voice <voice> <file>` | Extract the resolved lyrics for one voice. |
 
 For example:

@@ -5,6 +5,7 @@
 # Setup
 
 - [Installation](./setup/installation.md)
+- [Editor support](./setup/editor.md)
 
 # Basics
 

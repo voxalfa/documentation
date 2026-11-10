@@ -6,11 +6,11 @@ Examples in this chapter often show alternative values for the same key. In a re
 
 ## Primitive types
 
-| Type | Examples | Notes |
-| --- | --- | --- |
-| Number | `100`, `1.5`, `3` | Integers and floats. |
-| String | `"Hello"`, `"mg"` | Delimited by double quotes. |
-| Boolean | Reserved | Planned for future options. |
+| Type    | Examples                   | Notes                            |
+| ------- | -------------------------- | -------------------------------- |
+| Number  | `100`, `1.5`, `3`          | Integers and floats.             |
+| String  | `"Hello"`, `"mg"`          | Delimited by double quotes.      |
+| Boolean | Reserved                   | Planned for future options.      |
 | Builtin | `C`, `allegro`, `S`, `frm` | Predefined constants; see below. |
 
 ## Strings

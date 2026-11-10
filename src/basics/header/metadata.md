@@ -2,17 +2,17 @@
 
 Metadata lines use the `[#]` marker and describe the score. They are fully typed and may only appear in the header.
 
-| Field | Type | Description |
-| --- | --- | --- |
-| `title` | string | Score title. |
-| `author` | string or string list | Lyricist or text author. |
-| `composer` | string or string list | Composer. |
-| `verses` | number | Number of lyric verses. |
-| `meter` | number list | Metrical structure, when relevant. |
-| `release` | number | Release year. |
-| `language` | string | Language code, for example `en` or `mg`. |
-| `description` | string | Short description. |
-| `tags` | string list | Searchable tags. |
+| Field         | Type                  | Description                              |
+| ------------- | --------------------- | ---------------------------------------- |
+| `title`       | string                | Score title.                             |
+| `author`      | string or string list | Lyricist or text author.                 |
+| `composer`    | string or string list | Composer.                                |
+| `verses`      | number                | Number of lyric verses.                  |
+| `meter`       | number list           | Metrical structure, when relevant.       |
+| `release`     | number                | Release year.                            |
+| `language`    | string                | Language code, for example `en` or `mg`. |
+| `description` | string                | Short description.                       |
+| `tags`        | string list           | Searchable tags.                         |
 
 ## Example
 
