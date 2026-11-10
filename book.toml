@@ -7,6 +7,8 @@ language = "en"
 default-theme = "rust"
 preferred-dark-theme = "rust"
 git-repository-url = "https://github.com/voxalfa/voxalfa-docs"
+additional-css = ["theme/score.css"]
+additional-js = ["./js/tone.js", "./js/midi.js", "./js/script.js" ]
 
 [preprocessor.tsitter.languages.voxalfa]
 git = "https://github.com/voxalfa/voxalfa"

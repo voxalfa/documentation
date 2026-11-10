@@ -1,0 +1,41 @@
+.score-viewer.show-image {
+  background: #fff;
+}
+
+.score-viewer.show-image > code {
+  display: none;
+}
+
+.score-viewer-image {
+  display: none;
+  width: 100%;
+  height: auto;
+  background: #fff;
+}
+
+.score-viewer.show-image .score-viewer-image {
+  display: block;
+}
+
+.score-viewer-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+}
+
+.score-viewer-button {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--table-border-color, #ccc);
+  border-radius: 4px;
+  background: var(--bg, #fff);
+  color: var(--links, #4183c4);
+  font: inherit;
+  cursor: pointer;
+}
+
+.score-viewer-button:hover {
+  border-color: var(--links, #4183c4);
+}

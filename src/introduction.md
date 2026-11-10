@@ -18,63 +18,19 @@ A Voxalfa file can currently be converted to MIDI, SVG, and PDF; MusicXML suppor
 
 Below is a simple Voxalfa score illustrating how metadata, per voice lyrics, and multiple endings endings are represented in a compact way. It also demonstrates Voxalfa’s CSS-like directive system for custom visual styling.
 
+<div class="score-viewer-actions">
+  <button type="button" class="score-viewer-button" data-score-toggle="follow-me" data-score-svg="assets/svg/follow-me.svg" data-score-alt="Sheet music for Follow me" aria-pressed="false">
+    View rendered score
+  </button>
+  <button type="button" class="score-viewer-button" data-midi="assets/midi/follow-me.mid" aria-pressed="false">
+    Play MIDI
+  </button>
+  <a href="assets/midi/follow-me.mid">Download the MIDI</a>
+</div>
+
 ```voxalfa
-;; @version 0.1.0-alpha
-
-[#] title="Follow me"
-[#] author="Daniel Batchellor"
-[#] description="A sample song from the Tonic Sol-Fa music course for schools."
-[#] verses={1}
-[#] language="en"
-[#] tags={"example","practice"}
-
-[$] key={G} | time={4,4} | tempo={adagio} | voices={S,A}
-
-;; @title-text margin-bottom={20}
-;; @note-text font-size={16}
-;; @lyrics-text font-size={12} | color="#333333"
-
----
-
-[$] mark={S}
-
-[S] |d   :t-1 !d   :r   |m   :f   !m   :r   ||
-
-[1] Fol_ low, me   come Fol_ low  me,  and  @@
-
-++
-
-[A] |    :    !    :    |d   :t-1 !d   :r   ||
-
-[1] ~@4                 We   will fol_ low  @@
-
---
-
-[$] ending={1} | jump={DS}
-
-[S] |d   :t-1 !d   :r   |m   :f   !m   :    ||
-
-[1] we   will sing in   har_ mo_  ny.@2\    @@
-
-++
-
-[A] |m   :f   !m   :r   |d   :t-1 !d   :    ||
-
-[1] we   will sing in   har_ mo_  ny.@2\    @@
-
---
-
-[$] ending={2}
-
-[S] |d   :t-1 !d   :r   |m   :f   !m   :-   ||
-
-[1] we   will sing in   har_ mo_  ny.@2
-
-++
-
-[A] |m   :f   !m   :r   |d   :t-1 !d   :-   ||
-
-[1] we   will sing in   har_ mo_  ny!@2
+{{#include assets/vfa/follow-me.vfa}}
 ```
+
 
 Voxalfa is still in early development. Syntax and features may change before the first stable release. It is open-source and available on [GitHub](https://voxalfa/voxalfa).
