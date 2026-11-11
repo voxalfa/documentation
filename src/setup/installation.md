@@ -2,20 +2,22 @@
 
 The `voxalfa` command-line tool provides formatting, validation, and conversion to MIDI, SVG, and PDF.
 
-Voxalfa is currently experimental. There is no stable release yet; only nightly builds are available.
+Voxalfa is currently in alpha stage and there is no stable release yet. We recommend using nightly builds for the moment.
 
 ## Nightly binaries
 
 Prebuilt binaries are published under the [`nightly` release](https://github.com/voxalfa/voxalfa/releases/tag/nightly):
 
-| Platform            | Asset                        |
-| ------------------- | ---------------------------- |
-| Linux x86-64        | `voxalfa-linux-x86_64`       |
-| macOS Intel         | `voxalfa-macos-x86_64`       |
-| macOS Apple Silicon | `voxalfa-macos-arm64`        |
-| Windows x86-64      | `voxalfa-windows-x86_64.exe` |
+| Platform            | Asset                         |
+| ------------------- | ----------------------------- |
+| Linux x86-64        | `voxalfa-linux-x86_64.tar.gz` |
+| macOS Intel         | `voxalfa-macos-x86_64.tar.gz` |
+| macOS Apple Silicon | `voxalfa-macos-arm64.tar.gz`  |
+| Windows x86-64      | `voxalfa-windows-x86_64.zip`  |
 
-Download the binary for your platform, make it executable if necessary, and place it somewhere on your `PATH`.
+Download and extract the binary for your platform, make it executable if necessary, and place it somewhere on your `PATH`.
+
+Example on Linux:
 
 ```bash
 chmod +x voxalfa-linux-x86_64
@@ -27,7 +29,7 @@ Nightly builds track the `main` branch and may contain breaking changes.
 
 ## Build from source
 
-Voxalfa is a Rust workspace, so you need a recent stable Rust toolchain.
+Voxalfa is a [Rust](https://rust-lang.org/) project, so you can easily build it from source with the Rust [toolchain](https://rustup.rs/).
 
 ```bash
 git clone https://github.com/voxalfa/voxalfa.git
