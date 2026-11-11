@@ -15,7 +15,7 @@
 
 ---
 
-[$] mark={S}
+[$] mark={S} | dynamics={f}
 
 [S] |d   :t-1 !d   :r   |m   :f   !m   :r   ||
 

@@ -59,7 +59,7 @@ Element directives:
 | `octave-text`      | Octave numbers.                       |
 | `lyrics-text`      | Lyrics.                               |
 | `divider-text`     | Dividers and barlines.                |
-| `page-number-text` | Page numbers.                         |
+| `footer-text`      | Footer page number.                   |
 | `key-label`        | Key label.                            |
 | `time-label`       | Time label.                           |
 | `tempo-label`      | Named tempo label, such as `allegro`. |
