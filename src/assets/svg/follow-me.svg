@@ -255,7 +255,7 @@
 <text x="408.88" y="219.06" text-anchor="start" class="volta-label">1.</text>
 <text x="727.76" y="219.06" text-anchor="end" class="jump-label">D.S.</text>
 <text x="82.44" y="235.67" text-anchor="middle" class="dynamic-label">f</text>
-<text x="285.89" y="313.16" text-anchor="middle" class="dynamic-label">p</text>
+<text x="248.72" y="313.16" text-anchor="middle" class="dynamic-label">p</text>
 <g class="marker marker-segno" transform="translate(78.31 200.14) scale(4.1314)"><path transform="matrix(0.004,0,0,-0.004,1,1.5)" d="m -202,-50 c 0,17 13,30 30,30 17,0 30,-13 30,-30 0,-17 -13,-30 -30,-30 -17,0 -30,13 -30,30 z M 142,50 c 0,17 13,30 30,30 17,0 30,-13 30,-30 0,-17 -13,-30 -30,-30 -17,0 -30,13 -30,30 z M -35,-227 c 0,34 17,59 54,59 39,0 58,-31 58,-62 0,-27 -15,-55 -40,-64 8,-29 36,-51 69,-51 38,0 66,35 66,75 0,99 -83,168 -172,219 l -190,-324 -60,0 204,349 c -104,58 -204,132 -204,245 0,86 62,156 144,156 79,0 141,-68 141,-148 0,-34 -17,-59 -54,-59 -39,0 -58,31 -58,62 0,27 15,55 40,64 -8,29 -36,51 -69,51 -38,0 -66,-35 -66,-75 0,-99 83,-168 172,-219 l 190,324 60,0 L 46,26 c 104,-58 204,-132 204,-245 0,-86 -62,-156 -144,-156 -79,0 -141,68 -141,148 z" fill="#333333"/></g>
 <text x="82.44" y="261.13" text-anchor="middle" class="note-text">d</text>
 <text x="114.88" y="261.13" text-anchor="middle" class="divider-text">:</text>

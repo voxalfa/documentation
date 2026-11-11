@@ -32,5 +32,4 @@ Below is a simple Voxalfa score illustrating how metadata, per voice lyrics, and
 {{#include assets/vfa/follow-me.vfa}}
 ```
 
-
 Voxalfa is still in early development. Syntax and features may change before the first stable release. It is open-source and available on [GitHub](https://github.com/voxalfa/voxalfa).

@@ -23,7 +23,7 @@
 
 ++
 
-[$] dynamics={p:5}
+[$] dynamics={p:4}
 
 [A] |    :    !    :    |d   :t-1 !d   :r   ||
 
