@@ -23,11 +23,11 @@ Empty pulses still occupy time and still count as lyric cells. This matters when
 
 Tokens are joined with operators that describe spacing, concatenation, and line breaks. The operators exist so that lyrics can be rendered as normal text outside the score: they tell the lyric renderer where spaces, joins, and line breaks belong, without relying on visual alignment.
 
-| Operator | Meaning | Example |
-| --- | --- | --- |
-| space | Word space. | `do re` |
-| `_` | Concatenate without a space. | `re_mi` |
-| `\` | Line break. | `mi\fa` |
+| Operator | Meaning                      | Example |
+| -------- | ---------------------------- | ------- |
+| space    | Word space.                  | `do re` |
+| `_`      | Concatenate without a space. | `re_mi` |
+| `\`      | Line break.                  | `mi\fa` |
 
 ```voxalfa fragment
 [S] |d :r !m :f ||
@@ -242,17 +242,15 @@ If the slurred group spans multiple cells and has a single lyric token, put the 
 Some characters have a syntactic meaning in lyrics. Use the corresponding escape when they must appear as text:
 
 | Escape | Character |
-| --- | --- |
-| `&bls` | `\` |
-| `&tld` | `~` |
-| `&btk` | `` ` `` |
-| `&sls` | `/` |
-| `&lpr` | `(` |
-| `&rpr` | `)` |
-| `&atr` | `@` |
-| `&amp` | `&` |
-| `&scl` | `;` |
-| `&dot` | `.` |
+| ------ | --------- |
+| `&bls` | `\`       |
+| `&tld` | `~`       |
+| `&btk` | `` ` ``   |
+| `&lpr` | `(`       |
+| `&rpr` | `)`       |
+| `&atr` | `@`       |
+| `&amp` | `&`       |
+| `&scl` | `;`       |
 
 ```voxalfa fragment
 [S] |d :r !m :f ||
