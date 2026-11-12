@@ -34,6 +34,21 @@ Page options:
 | `margin-top`, `margin-right`, `margin-bottom`, `margin-left` | Individual margins.             |
 | `margin-x`, `margin-y`                                       | Horizontal or vertical margins. |
 
+## Layout blocks
+
+The `header` and `system` directives control the space around the header block and around each system. They accept `margin` and `padding` with the same side modifiers as element styles. Only the vertical values affect page flow.
+
+```voxalfa fragment
+;; @header margin-top={0} | margin-bottom={20}
+;; @system margin-top={0} | margin-bottom={10}
+```
+
+- Space before the header: `page` margin top + `header` margin top.
+- Header to first system: `header` margin bottom + `system` margin top.
+- Between systems: previous `system` margin bottom + next `system` margin top.
+
+Padding is added inside the block, before its margins. Defaults are `header` margin-bottom `20` and `system` bottom `10`.
+
 ## Element styles
 
 Element directives control typography and spacing for a specific part of the rendered score:
@@ -47,27 +62,27 @@ Element directives control typography and spacing for a specific part of the ren
 
 Element directives:
 
-| Directive          | Target                                |
-| ------------------ | ------------------------------------- |
-| `title-text`       | Score title.                          |
-| `author-text`      | Author line.                          |
-| `composer-text`    | Composer line.                        |
-| `key-text`         | Key signature text.                   |
-| `time-text`        | Time signature text.                  |
-| `meter-text`       | Meter text.                           |
-| `note-text`        | Solfa note text.                      |
-| `octave-text`      | Octave numbers.                       |
-| `lyrics-text`      | Lyrics.                               |
-| `divider-text`     | Dividers and barlines.                |
-| `footer-text`      | Footer page number.                   |
-| `key-label`        | Key label.                            |
-| `time-label`       | Time label.                           |
-| `tempo-label`      | Named tempo label, such as `allegro`. |
-| `bpm-label`        | Numeric tempo mark, such as `M. 120`. |
-| `jump-label`       | Jump label.                           |
-| `mark-label`       | Mark label.                           |
-| `dynamic-label`    | Dynamic label.                        |
-| `volta-label`      | Volta label.                          |
+| Directive       | Target                                |
+| --------------- | ------------------------------------- |
+| `title-text`    | Score title.                          |
+| `author-text`   | Author line.                          |
+| `composer-text` | Composer line.                        |
+| `key-text`      | Key signature text.                   |
+| `time-text`     | Time signature text.                  |
+| `meter-text`    | Meter text.                           |
+| `note-text`     | Solfa note text.                      |
+| `octave-text`   | Octave numbers.                       |
+| `lyrics-text`   | Lyrics.                               |
+| `divider-text`  | Dividers and barlines.                |
+| `footer-text`   | Footer page number.                   |
+| `key-label`     | Key label.                            |
+| `time-label`    | Time label.                           |
+| `tempo-label`   | Named tempo label, such as `allegro`. |
+| `bpm-label`     | Numeric tempo mark, such as `M. 120`. |
+| `jump-label`    | Jump label.                           |
+| `mark-label`    | Mark label.                           |
+| `dynamic-label` | Dynamic label.                        |
+| `volta-label`   | Volta label.                          |
 
 ### Element properties
 
