@@ -10,6 +10,7 @@ Voxalfa is a directive, line-based language. Every line starts with a **marker**
 | `[$]`                      | Parameters, either in the header or at the start of a section. |
 | `[S]`, `[A]`, `[T]`, `[B]` | Solfa lines for the voices declared in `voices`.               |
 | `[1]`, `[2]`, `[3]`, ...   | Lyrics for the corresponding verse.                            |
+| `[*]`                      | Wildcard lyrics, shared by every verse.                        |
 
 A marker is followed by either a key-value list or a token list:
 

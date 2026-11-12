@@ -1,6 +1,6 @@
 # Lyrics
 
-Lyrics use a verse marker and are attached to solfa cells by order:
+Lyrics use a verse marker and are attached to solfa cells by order. Numbered markers select a single verse, while `[*]` declares a wildcard line shared by every verse:
 
 ```voxalfa fragment
 [S] |d .r :m .f !s .l :t .d+1 ||
@@ -134,6 +134,45 @@ If a declared voice is silent in a section, still write its line with empty puls
 
 [A] | : | : | : | : ||
 [1] ~@8
+```
+
+## Wildcard lyrics
+
+Use `[*]` instead of a verse number to declare one line that is sung on every verse:
+
+```voxalfa
+;; @version 0.1.0-alpha
+
+[#] verses={2}
+
+[$] key={C} | time={4,4} | voices={S}
+
+---
+
+[S] |d :r !m :f ||
+
+[*] do re mi fa
+```
+
+The line is repeated for verse 1 and verse 2, so the score has two identical lyric rows. This is useful for refrains, or when every verse shares the same text.
+
+Do not mix `[*]` with numbered lines in the same sub-section.
+
+Per-voice lyrics can use a wildcard line in each sub-section:
+
+```voxalfa fragment
+[S] |d :r !m :f ||
+[*] do re mi fa @@
+
+++
+
+[A] |d :r !m :f ||
+[*] la ti do re @@
+
+--
+
+[S] |s :l !t :d+1 ||
+[*] so la ti do
 ```
 
 ## Grouping

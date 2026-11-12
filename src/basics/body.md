@@ -94,7 +94,7 @@ Solfa lines use a voice marker such as `[S]` and end with `||`:
 [S] |d .r :m .f !s .l :t .d+1 ||
 ```
 
-Lyrics use a verse marker and are attached to notes:
+Lyrics use a verse marker and are attached to notes. Numbered markers select one verse, while `[*]` declares a wildcard line shared by every verse:
 
 ```voxalfa fragment
 [1] do re mi fa so la ti do
