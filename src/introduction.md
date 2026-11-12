@@ -18,6 +18,8 @@ A Voxalfa file can currently be converted to MIDI, SVG, and PDF; MusicXML suppor
 
 Below is a simple Voxalfa score illustrating how metadata, per voice lyrics, and multiple endings endings are represented in a compact way. It also demonstrates Voxalfa’s CSS-like directive system for custom visual styling.
 
+Download: [MIDI](assets/midi/follow-me.mid) · [PDF](assets/pdf/follow-me.pdf)
+
 <div class="score-viewer-actions">
   <button type="button" class="score-viewer-button" data-score-toggle="follow-me" data-score-svg="assets/svg/follow-me.svg" data-score-alt="Sheet music for Follow me" aria-pressed="false">
     View rendered score
@@ -25,7 +27,6 @@ Below is a simple Voxalfa score illustrating how metadata, per voice lyrics, and
   <button type="button" class="score-viewer-button" data-midi="assets/midi/follow-me.mid" aria-pressed="false">
     Play MIDI
   </button>
-  <a href="assets/midi/follow-me.mid">Download the MIDI</a>
 </div>
 
 ```voxalfa
