@@ -5,9 +5,9 @@ language = "en"
 
 [output.html]
 default-theme = "rust"
-preferred-dark-theme = "rust"
+preferred-dark-theme = "ayu"
 git-repository-url = "https://github.com/voxalfa/voxalfa-docs"
-additional-css = ["theme/score.css"]
+additional-css = ["theme/score.css", "theme/code.css"]
 additional-js = ["./js/tone.js", "./js/midi.js", "./js/script.js" ]
 
 [preprocessor.tsitter.languages.voxalfa]

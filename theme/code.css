@@ -1,0 +1,81 @@
+/*
+ * Mirrors the playground editor theme (voxalfa-playground/src/config/theme.ts):
+ */
+
+:root,
+.light,
+.rust {
+  --code-fg: #262625;
+  --code-muted: #6e6b5e;
+  --code-accent: #8c391f;
+  --code-string: #2b79a2;
+}
+
+.coal,
+.navy,
+.ayu {
+  --code-fg: #bfbdb6;
+  --code-muted: #6e6e6e;
+  --code-accent: #c18639;
+  --code-string: #6f9fbf;
+}
+
+pre.treesitter > code {
+  color: var(--code-fg);
+}
+
+.ts-comment,
+.ts-markup-quote {
+  color: var(--code-muted);
+  font-style: italic;
+}
+
+.ts-keyword,
+.ts-keyword-operator,
+.ts-keyword-directive,
+.ts-conditional,
+.ts-repeat,
+.ts-number,
+.ts-float,
+.ts-boolean,
+.ts-constant-builtin,
+.ts-operator,
+.ts-error {
+  color: var(--code-accent);
+}
+
+.ts-string,
+.ts-character,
+.ts-string-special,
+.ts-string-escape,
+.ts-string-regexp,
+.ts-character-special,
+.ts-constant,
+.ts-type,
+.ts-type-builtin,
+.ts-constructor,
+.ts-attribute {
+  color: var(--code-string);
+}
+
+.ts-identifier,
+.ts-variable,
+.ts-variable-builtin,
+.ts-variable-parameter,
+.ts-property,
+.ts-field,
+.ts-function,
+.ts-method,
+.ts-function-call,
+.ts-method-call,
+.ts-namespace,
+.ts-module {
+  color: var(--code-fg);
+}
+
+.ts-punctuation,
+.ts-punctuation-bracket,
+.ts-punctuation-delimiter {
+  color: var(--code-muted);
+  opacity: 1;
+}
