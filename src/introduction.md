@@ -2,7 +2,7 @@
 
 Voxalfa is a declarative, data-oriented language for composing and storing [Tonic sol-fa](https://en.wikipedia.org/wiki/Tonic_sol-fa) scores in a compact, human-readable format.
 
-A Voxalfa file can currently be converted to MIDI, SVG, and PDF; MusicXML support is planned. The main way to use Voxalfa is through its [CLI](setup/installation.md) interface, but you can also try it right now in your [browser](https://voxalfa.github.io/playground) with some limitations.
+A Voxalfa file can currently be converted to MIDI, SVG, and PDF; MusicXML support is planned. The main way to use Voxalfa is through its [CLI](setup/installation.md), but you can also try it right now in your [browser](https://voxalfa.github.io/playground) with some limitations.
 
 ## Key Features
 
