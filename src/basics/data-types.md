@@ -206,7 +206,7 @@ Dynamics control loudness and are rendered as dynamic markings.
 
 Dynamics and touches can be attached to a time index. Time indices are zero-based and relative to the section start and note durations. A value without an index defaults to `0`.
 
-An index is a position on the section timeline, not a note number. This lets a timed parameter target a point in the music without naming the note, and lets a range run from one point to another. Every cell advances the timeline: notes, prolongations, and empty pulses all take time and must be counted.
+An index is a position on the section timeline, not a note number. This lets a timed parameter target a point in the music without naming the note, and lets a range run from one point to another. Every pulse and beat division advances the timeline: notes, prolongations, and empty pulses all take time and must be counted.
 
 `dynamics` is a sub-section parameter, while `touches` is a section parameter. Both are written at the start of a section, inside its first sub-section.
 
@@ -224,7 +224,7 @@ Consider this section:
 [S] |d :r !m :f ||
 ```
 
-Each pulse is a whole note, so `p:2` targets the third pulse.
+Each pulse advances the timeline by one unit, so `p:2` targets the third pulse. The absolute duration of a pulse depends on the time signature: in `4/4`, one pulse is a quarter note.
 
 Empty pulses still advance the timeline. In the next example the empty second pulse is index `1`, so `p:2` still targets `m`:
 
