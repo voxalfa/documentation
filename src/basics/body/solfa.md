@@ -31,27 +31,27 @@ A **pulse** is the basic rhythmic unit of a solfa line. Each pulse starts with a
 ;    |  :  !  :
 ```
 
-## Empty pulses
+## Rests
 
-A pulse with an accent but no note is an empty pulse. Empty pulses are rests: they occupy time and count as lyric cells.
+A pulse with an accent but no note is a rest. Rests occupy time and count as lyric cells.
 
 ```voxalfa fragment
 [S] |d : !m :f ||
 ```
 
-In `2/4`, `| :` is an empty measure: an empty strong pulse followed by an empty weak pulse. Empty measures can be chained:
+In `2/4`, `| :` is a measure with rests: a rest on the strong pulse followed by a rest on the weak pulse. Such measures can be chained:
 
 ```voxalfa fragment
 [S] | : | : |d :r ||
 ```
 
-A pulse can also be partially empty. In `: .s`, the weak pulse has an empty first half and `s` on the second half:
+A pulse can also be partially silent. In `: .s`, the weak pulse has a rest on its first half and `s` on the second half:
 
 ```voxalfa fragment
 [S] |d : .s ||
 ```
 
-Empty pulses matter for timed parameters and lyrics: they advance the timeline and occupy a lyric cell. Use placeholders such as `~` or `~@4` in lyrics to reserve empty cells without rendering text (see [Lyrics](./lyrics.md#placeholders)).
+Rests matter for pulse indices and lyrics: they advance the index and occupy a lyric cell. Use placeholders such as `~` or `~@4` in lyrics to reserve cells without rendering text (see [Lyrics](./lyrics.md#placeholders)).
 
 ## Notes
 

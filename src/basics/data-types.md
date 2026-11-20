@@ -151,7 +151,7 @@ Jumps control navigation during playback and are rendered as jump labels.
 [$] jump={DCF}
 ```
 
-Jumps do not take a time index. A jump is placed implicitly at the end of the section where it is declared.
+Jumps do not take a pulse index. A jump is placed implicitly at the end of the section where it is declared.
 
 ### Marks
 
@@ -167,11 +167,11 @@ Marks identify the targets used by jumps and are rendered as symbols or labels.
 [$] mark={F}
 ```
 
-Marks do not take a time index either. Segno and coda are placed implicitly at the start of their section; fine and to-coda are placed at the end. See [Navigation](./body/parameters.md#navigation).
+Marks do not take a pulse index either. Segno and coda are placed implicitly at the start of their section; fine and to-coda are placed at the end. See [Navigation](./body/parameters.md#navigation).
 
 ### Touches
 
-Touches are articulations: they describe how a note is played rather than how loud or how long the whole section is.
+Touches are articulations: they describe how a note is played rather than how loud or how long the whole section is. A touch applies to a single note, indexed with a [pulse index](#pulse-indices).
 
 - `stc`: staccato; play the note short and detached.
 - `frm`: fermata; hold the note longer than its written value.
@@ -200,65 +200,42 @@ Dynamics control loudness and are rendered as dynamic markings.
 [$] dynamics={p:2}
 ```
 
-## Timed values
+## Pulse indices
 
-### Time indices
+Pulse indices are a way of indexing notes so that markers can be attached to a note or a range.
 
-Dynamics and touches can be attached to a time index. Time indices are zero-based and relative to the section start and note durations. A value without an index defaults to `0`.
-
-An index is a position on the section timeline, not a note number. This lets a timed parameter target a point in the music without naming the note, and lets a range run from one point to another. Every pulse and beat division advances the timeline: notes, prolongations, and empty pulses all take time and must be counted.
-
-`dynamics` is a sub-section parameter, while `touches` is a section parameter. Both are written at the start of a section, inside its first sub-section.
-
-```voxalfa fragment
-[$] dynamics={p:2}
-[$] touches={frm:4}
-```
-
-Consider this section:
+- Indices are zero-based and relative to the section start.
+- One pulse counts as one unit.
+- A value without an index defaults to `0`.
+- Subdivisions are fractional parts of a pulse.
+- Rests and prolongations still advance the index.
+- Triplet positions can use `0.3` for `1/3` and `0.7` for `2/3`; `0.33` and `0.66` are not needed.
 
 ```voxalfa fragment
-[$] dynamics={p:2}
+[$] dynamics={p:0, cre:0.5..1, f:1.5}
 
-;    0  1  2  3
-[S] |d :r !m :f ||
+;    p          cre.........    f
+;    0    0.25  0.5  0.75  1    1.5
+[S] |d    ,r    .m   ,f    :s   .l ||
 ```
 
-Each pulse advances the timeline by one unit, so `p:2` targets the third pulse. The absolute duration of a pulse depends on the time signature: in `4/4`, one pulse is a quarter note.
-
-Empty pulses still advance the timeline. In the next example the empty second pulse is index `1`, so `p:2` still targets `m`:
-
-```voxalfa fragment
-[$] dynamics={p:2}
-
-;    0  1  2  3
-[S] |d :  !m :f ||
-```
-
-With beat divisions, the indices become fractional:
-
-```voxalfa fragment
-[$] dynamics={cre:0.5..1}
-
-;    0 0.25 0.5 0.75 1  1.5
-[S] |d  ,r  .m  ,f  :s  .l ||
-```
+Here `p` is on `d`, the crescendo starts on `m` and includes `s`, and `f` is on `l`.
 
 ### Ranges
 
-A time range uses `..` and is inclusive:
+A range uses `..` and is inclusive: the note starting at the end index is included. Both endpoints must fall on a position where a note starts.
 
 ```voxalfa fragment
 [$] dynamics={cre:0.5..1}
 ```
 
-In the earlier `4/4` example with beat divisions, this range starts the crescendo at the third note and ends it at the fifth note, at time index `1`.
+In the example above, this range starts the crescendo on `m` and includes `s`; the crescendo ends after that note finishes.
 
-### Indices across sections
+### Pulse indices across sections
 
-`--` and `==` restart the timeline at `0` for the next section. `<<` continues it. Sub-sections created with `++` also continue the timeline of their section.
+`--` and `==` restart the pulse index at `0` for the next section. `<<` continues it. Sub-sections created with `++` also continue the pulse index of their section.
 
-Merged sections are mainly useful when a timed parameter must continue across a section boundary. For example, a crescendo that starts before the boundary and ends after it needs continuous indices:
+Merged sections are mainly useful for ranges that must continue across a section boundary. For example, a crescendo that starts before the boundary and ends after it needs continuous indices:
 
 ```voxalfa fragment
 [$] dynamics={cre:2..5}

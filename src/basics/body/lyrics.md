@@ -15,9 +15,9 @@ A lyric token maps to a column in a solfa line. A column can be:
 
 - a note (`d`, `r`, ...),
 - a prolonged note (`-`),
-- an empty pulse or the empty half of a pulse (a rest).
+- a rest, either a full pulse or half of a pulse.
 
-Empty pulses still occupy time and still count as lyric cells. This matters when a word should cover a rest, when a voice enters later, or when a note is followed by a prolongation. See [Empty pulses](./solfa.md#empty-pulses).
+Rests still occupy time and still count as lyric cells. This matters when a word should cover a rest, when a voice enters later, or when a note is followed by a prolongation. See [Rests](./solfa.md#rests).
 
 ## Operators
 
@@ -53,7 +53,7 @@ The span modifier `@N` makes one lyric token cover `N` cells:
 - `June,@2` covers the `m` and its prolongation (`-`).
 - `ground,@2` covers the `s` and the empty half of `: .s`.
 
-A trailing empty pulse counts too:
+A trailing rest counts too:
 
 ```voxalfa fragment
 [S] |m : ||
@@ -92,7 +92,7 @@ The first pulse has two soprano notes and one alto note. The lyric token `do` co
 
 ## Placeholders
 
-The placeholder `~` reserves an **empty** cell without rendering text. It should be used for rests or empty pulses, not to skip a real note:
+The placeholder `~` reserves a cell without rendering text. It should be used for rests, not to skip a real note:
 
 ```voxalfa fragment
 [S] |d : !m :f ||
@@ -124,7 +124,7 @@ To give each voice its own lyrics, put each voice and its lyric line in a separa
 
 Sub-sections are simultaneous: they split the declarations of one section, not the timeline. Use this when voices need different texts or independent dynamics.
 
-If a declared voice is silent in a section, still write its line with empty pulses and reserve its lyric cells with placeholders:
+If a declared voice is silent in a section, still write its line with rests and reserve its lyric cells with placeholders:
 
 ```voxalfa fragment
 [S] | : | : |d :r .r ||

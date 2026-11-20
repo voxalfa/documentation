@@ -4,7 +4,7 @@ The body is the part of a document after the `---` separator. It contains the mu
 
 ## Sections
 
-Sections are purely arbitrary building blocks. They organize source lines and control how time indices continue, but they are independent of the final rendering: the renderer decides where to break systems and pages, except where a major section is explicitly marked.
+Sections are purely arbitrary building blocks. They organize source lines and control how pulse indices continue, but they are independent of the final rendering: the renderer decides where to break systems and pages, except where a major section is explicitly marked.
 
 A section can contain a single pulse or many pulses. It is a logical grouping, not a fixed number of measures.
 
@@ -12,7 +12,7 @@ Some parameters require starting a new section because they apply relative to it
 
 ### New sections with `--`
 
-`--` starts a new section and restarts time indices at `0`:
+`--` starts a new section and restarts pulse indices at `0`:
 
 ```voxalfa fragment
 ;    0  1  2  3
@@ -26,7 +26,7 @@ Some parameters require starting a new section because they apply relative to it
 
 ### Merged sections with `<<`
 
-`<<` starts a new section but continues the time line from the previous section:
+`<<` starts a new section but continues the pulse indices from the previous section:
 
 ```voxalfa fragment
 ;    0  1  2  3
@@ -40,11 +40,11 @@ Some parameters require starting a new section because they apply relative to it
 
 A merged section must use the same voice structure as the section it continues.
 
-Merging is mainly useful for timed indexing: it lets a dynamic or touch range continue across a section boundary. If you only want a new section, use `--` or `==`. See [Indices across sections](./data-types.md#indices-across-sections).
+Merging is mainly useful for pulse indexing: it lets a dynamic range continue across a section boundary. If you only want a new section, use `--` or `==`. See [Pulse indices across sections](./data-types.md#pulse-indices-across-sections).
 
 ### Major sections with `==`
 
-`==` starts a major section. The previous section ends a larger structural block, and time indices restart:
+`==` starts a major section. The previous section ends a larger structural block, and pulse indices restart:
 
 ```voxalfa fragment
 ;    0  1  2  3
@@ -58,7 +58,7 @@ Merging is mainly useful for timed indexing: it lets a dynamic or touch range co
 
 ### Sub-sections with `++`
 
-`++` splits the declarations of one section into sub-sections. Time indices continue across sub-sections, but each sub-section can contain a different set of voices and lyrics:
+`++` splits the declarations of one section into sub-sections. Pulse indices continue across sub-sections, but each sub-section can contain a different set of voices and lyrics:
 
 ```voxalfa fragment
 [S] |d :r !m :f ||
