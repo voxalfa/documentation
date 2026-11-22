@@ -6,12 +6,12 @@ Examples in this chapter often show alternative values for the same key. In a re
 
 ## Primitive types
 
-| Type    | Examples                   | Notes                            |
-| ------- | -------------------------- | -------------------------------- |
-| Number  | `100`, `1.5`, `3`          | Integers and floats.             |
-| String  | `"Hello"`, `"mg"`          | Delimited by double quotes.      |
-| Boolean | Reserved                   | Planned for future options.      |
-| Builtin | `C`, `allegro`, `S`, `frm` | Predefined constants; see below. |
+| Type    | Examples                       | Notes                            |
+| ------- | ------------------------------ | -------------------------------- |
+| Number  | `100`, `1.5`, `3`              | Integers and floats.             |
+| String  | `"Hello"`, `"mg"`              | Delimited by double quotes.      |
+| Boolean | Reserved                       | Planned for future options.      |
+| Builtin | `C`, `allegro`, `S`, `fermata` | Predefined constants; see below. |
 
 ## Strings
 
@@ -115,10 +115,12 @@ Tempos control playback speed. A tempo can be a named static tempo, an explicit 
 #### Extended tempos
 
 - `rit`: ritardando; gradually slower.
+- `rall`: rallentando; gradually slower.
 - `accel`: accelerando; gradually faster.
 
 ```voxalfa fragment
 [$] tempo={rit}
+[$] tempo={rall}
 [$] tempo={accel}
 ```
 
@@ -159,8 +161,8 @@ Marks identify the targets used by jumps and are rendered as symbols or labels.
 
 - `S`: segno.
 - `C`: coda.
-- `F`: fine.
 - `TC`: to coda.
+- `F`: fine.
 
 ```voxalfa fragment
 [$] mark={S}
@@ -173,12 +175,12 @@ Marks do not take a pulse index either. Segno and coda are placed implicitly at 
 
 Touches are articulations: they describe how a note is played rather than how loud or how long the whole section is. A touch applies to a single note, indexed with a [pulse index](#pulse-indices).
 
-- `stc`: staccato; play the note short and detached.
-- `frm`: fermata; hold the note longer than its written value.
-- `mrc`: marcato; play the note with a strong accent.
+- `staccato`: play the note short and detached.
+- `fermata`: hold the note longer than its written value.
+- `marcato`: play the note with a strong accent.
 
 ```voxalfa fragment
-[$] touches={frm:4}
+[$] touches={fermata:4}
 ```
 
 ### Dynamics
@@ -193,8 +195,9 @@ Dynamics control loudness and are rendered as dynamic markings.
 - `f`: forte; loud.
 - `ff`: fortissimo; very loud.
 - `fff`: fortississimo; very, very loud.
-- `cre`: crescendo; gradually louder.
-- `dec`: decrescendo; gradually softer.
+- `cresc`: crescendo; gradually louder.
+- `decresc`: decrescendo; gradually softer.
+- `dim`: diminuendo; gradually softer (same as `decresc`).
 
 ```voxalfa fragment
 [$] dynamics={p:2}
@@ -212,9 +215,9 @@ Pulse indices are a way of indexing notes so that markers can be attached to a n
 - Triplet positions can use `0.3` for `1/3` and `0.7` for `2/3`; `0.33` and `0.66` are not needed.
 
 ```voxalfa fragment
-[$] dynamics={p:0, cre:0.5..1, f:1.5}
+[$] dynamics={p:0, cresc:0.5..1, f:1.5}
 
-;    p          cre.........    f
+;    p          cresc.......    f
 ;    0    0.25  0.5  0.75  1    1.5
 [S] |d    ,r    .m   ,f    :s   .l ||
 ```
@@ -226,7 +229,7 @@ Here `p` is on `d`, the crescendo starts on `m` and includes `s`, and `f` is on 
 A range uses `..` and is inclusive: the note starting at the end index is included. Both endpoints must fall on a position where a note starts.
 
 ```voxalfa fragment
-[$] dynamics={cre:0.5..1}
+[$] dynamics={cresc:0.5..1}
 ```
 
 In the example above, this range starts the crescendo on `m` and includes `s`; the crescendo ends after that note finishes.
@@ -238,7 +241,7 @@ In the example above, this range starts the crescendo on `m` and includes `s`; t
 Merged sections are mainly useful for ranges that must continue across a section boundary. For example, a crescendo that starts before the boundary and ends after it needs continuous indices:
 
 ```voxalfa fragment
-[$] dynamics={cre:2..5}
+[$] dynamics={cresc:2..5}
 [S] |d :r !m :f ||
 
 <<
