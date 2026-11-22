@@ -7,7 +7,7 @@ A Voxalfa file can currently be converted to MIDI, SVG, and PDF; MusicXML suppor
 ## Key Features
 
 - **Human-Readable & Ergonomic:** Clear, uniform syntax with no whitespace-based rules.
-- **Easy to write:** Faimiliar and intuitive syntax for writing lines of notes.
+- **Easy to write:** Familiar and intuitive syntax for writing lines of notes.
 - **Data-Oriented:** Fully typed data structure ensuring consistency across documents.
 - **Multiple Output Targets:** Compile seamlessly to SVG, MIDI, and more.
 - **Granular Control:** Full support for dynamics, multiple endings, and all kinds of directives.
@@ -16,7 +16,7 @@ A Voxalfa file can currently be converted to MIDI, SVG, and PDF; MusicXML suppor
 
 ## A minimal score
 
-Below is a simple Voxalfa score illustrating how metadata, per voice lyrics, and multiple endings endings are represented in a compact way. It also demonstrates Voxalfa’s CSS-like directive system for custom visual styling.
+Below is a simple Voxalfa score illustrating how metadata, per voice lyrics, and multiple endings are represented in a compact way. It also demonstrates Voxalfa’s CSS-like directive system for custom visual styling.
 
 Try it yourself in your [browser](https://voxalfa.github.io/playground).
 

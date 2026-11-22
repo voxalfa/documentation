@@ -12,7 +12,7 @@ Section parameters use the `[$]` marker at the top of a section, inside its firs
 | `jump`     | jump                    | [Jump](../data-types.md#jumps) instruction such as `DS` or `DC`.             |
 | `mark`     | mark                    | [Mark](../data-types.md#marks) such as segno, coda, fine, or to-coda.        |
 | `touches`  | touch list              | [Articulations](../data-types.md#touches) attached to notes.                 |
-| `repeat`   | number                  | Jump repeat count.                                                           |
+| `repeat`   | number                  | Number of times the jump is taken.                                           |
 | `dynamics` | dynamic list            | [Dynamic levels and changes](../data-types.md#dynamics) (sub-section only).  |
 
 ```voxalfa fragment
@@ -30,6 +30,8 @@ Section parameters use the `[$]` marker at the top of a section, inside its firs
 [$] tempo={accel}
 ```
 
+`rit`, `rall`, and `accel` interpolate over the section in which they are declared.
+
 ## Navigation
 
 Jumps and marks describe repeats and navigation in the rendered score:
@@ -42,7 +44,7 @@ Jumps and marks describe repeats and navigation in the rendered score:
 
 --
 
-; section section: ignored on the first run
+; second section: ignored on the first run
 [$] mark={F}
 
 ; ...
@@ -57,7 +59,7 @@ Jumps and marks describe repeats and navigation in the rendered score:
 
 Unlike touches and dynamics, marks and jumps do not take pulse indices. Their placement is implicit from the section they belong to: a segno mark (`mark={S}`) is placed at the start of its section, while a jump (`jump={DS}`, `jump={DC}`, ...) and end marks such as `mark={F}` or `mark={TC}` are placed at the end of their section.
 
-The `repeat` parameter can be used with non-final jumps to repeat a section.
+The `repeat` parameter is always tied to a jump. It specifies how many times the jump is taken; for example, `jump={DS} | repeat={2}` means take the DS jump twice. It is only meaningful on the section that declares the jump.
 
 ```voxalfa fragment
 [$] mark={S}

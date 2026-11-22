@@ -9,7 +9,7 @@ Initial parameters use the `[$]` marker and control how the score is played. The
 | `tempo`   | static tempo            | Initial [tempo](../data-types.md#tempos) name or BPM value. |
 | `voices`  | voice list              | [Voices](../data-types.md#voices) available in the body.    |
 
-`time` and `voices` are required when the body contains solfa lines.
+`time` and `voices` are required when the body contains solfa lines. For playback, `key` and `tempo` are also required.
 
 ```voxalfa fragment
 [$] key={Eb} | time={3,4} | tempo={70} | voices={S,A,T,B}
@@ -55,4 +55,4 @@ See [Tempos](../data-types.md#tempos) for the available names.
 [$] voices={S,A}
 ```
 
-Each voice used in the body must be listed here. See [Voices](../data-types.md#voices) for the available voice names.
+The `voices` list is an ordered pattern of soprano, alto, tenor, and bass parts. It is not limited to SATB: use any sequence, such as `{S,A,T}` or `{S,S,A,A,T,T}` (SSAATT). Solfa lines in each section must appear in the same order as this list. See [Voices](../data-types.md#voices) for the available voice names.

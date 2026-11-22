@@ -2,7 +2,7 @@
 
 Voxalfa has a small set of primitive types. Values are written either directly after `=` or inside braces for lists and structured values.
 
-Examples in this chapter often show alternative values for the same key. In a real document, assign each key once per scope; reassigning a key produces a warning.
+Examples in this chapter often show alternative values for the same key. In a real file, assign each key once per scope; reassigning a key produces a warning.
 
 ## Primitive types
 
@@ -124,6 +124,8 @@ Tempos control playback speed. A tempo can be a named static tempo, an explicit 
 [$] tempo={accel}
 ```
 
+For now, `rit`, `rall`, and `accel` interpolate over the section in which they are declared: the tempo changes gradually across that section.
+
 ### Voices
 
 Voices select which part of the score a solfa line belongs to.
@@ -133,8 +135,11 @@ Voices select which part of the score a solfa line belongs to.
 - `T`: tenor.
 - `B`: bass.
 
+The `voices` list is an ordered pattern and is not limited to SATB. Use any sequence, such as `{S,A,T}` for three voices or `{S,S,A,A,T,T}` for SSAATT. Solfa lines must follow the same order in each section.
+
 ```voxalfa fragment
 [$] voices={S,A,T,B}
+[$] voices={S,S,A,A,T,T}
 ```
 
 ### Jumps
@@ -241,12 +246,16 @@ In the example above, this range starts the crescendo on `m` and includes `s`; t
 Merged sections are mainly useful for ranges that must continue across a section boundary. For example, a crescendo that starts before the boundary and ends after it needs continuous indices:
 
 ```voxalfa fragment
-[$] dynamics={cresc:2..5}
+[$] dynamics={p:2, cresc:2..5, f:5}
+
+;          p cresc...
+;    0  1  2  3
 [S] |d :r !m :f ||
 
 <<
 
-[$] dynamics={f:4}
+;    ...f
+;    4  5  6  7
 [S] |s :l !t :d+1 ||
 ```
 

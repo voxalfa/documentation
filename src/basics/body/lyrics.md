@@ -1,23 +1,23 @@
 # Lyrics
 
-Lyrics use a verse marker and are attached to solfa cells by order. Numbered markers select a single verse, while `[*]` declares a wildcard line shared by every verse:
+Lyrics use a verse marker and are attached to solfa notes by order. Numbered markers select a single verse, while `[*]` declares a wildcard line shared by every verse:
 
 ```voxalfa fragment
 [S] |d .r :m .f !s .l :t .d+1 ||
 [1] do re mi fa so la ti do
 ```
 
-**By default, one lyric token takes exactly one cell.** Visual alignment is ignored: the compiler matches tokens to cells from left to right. You are responsible for writing spans whenever a token should cover more than one cell.
+The model is simple. A lyric token covers one note by default, and tokens are matched to notes from left to right. Empty notes and prolongations also count as notes. When voices divide a pulse differently, the token covers the whole pulse instead. Spans, placeholders, and anchors handle the remaining cases explicitly.
 
-## Cells
+## Notes
 
-A lyric token maps to a column in a solfa line. A column can be:
+A lyric token maps to a note in a solfa line. A note can be:
 
-- a note (`d`, `r`, ...),
-- a prolonged note (`-`),
-- a rest, either a full pulse or half of a pulse.
+- a sounded note (`d`, `r`, ...),
+- an empty note — a rest, either a full pulse or half of a pulse,
+- a prolongation (`-`) of the previous note.
 
-Rests still occupy time and still count as lyric cells. This matters when a word should cover a rest, when a voice enters later, or when a note is followed by a prolongation. See [Rests](./solfa.md#rests).
+Empty notes and prolongations still occupy time and count as lyric notes. This matters when a word should cover a rest, when a voice enters later, or when a note is followed by a prolongation. See [Rests](./solfa.md#rests).
 
 ## Operators
 
@@ -28,6 +28,8 @@ Tokens are joined with operators that describe spacing, concatenation, and line 
 | space    | Word space.                  | `do re` |
 | `_`      | Concatenate without a space. | `re_mi` |
 | `\`      | Line break.                  | `mi\fa` |
+
+Spaces may follow `_` or `\` and are ignored for readability: `re_ mi` is equivalent to `re_mi`, and `mi\ fa` to `mi\fa`.
 
 ```voxalfa fragment
 [S] |d :r !m :f ||
@@ -43,7 +45,7 @@ fa
 
 ## Explicit spans
 
-The span modifier `@N` makes one lyric token cover `N` cells:
+The span modifier `@N` makes one lyric token cover `N` notes:
 
 ```voxalfa fragment
 [S] |m :- .m |s : .s ||
@@ -53,7 +55,7 @@ The span modifier `@N` makes one lyric token cover `N` cells:
 - `June,@2` covers the `m` and its prolongation (`-`).
 - `ground,@2` covers the `s` and the empty half of `: .s`.
 
-A trailing rest counts too:
+A trailing empty note counts too:
 
 ```voxalfa fragment
 [S] |m : ||
@@ -63,9 +65,9 @@ A trailing rest counts too:
 The compiler does **not** infer spans from spacing. If you omit `@N`, later tokens shift left and the text is no longer aligned. Add spans explicitly when a token covers:
 
 - a note plus a prolongation,
-- a note plus an empty cell,
+- a note plus an empty note,
 - a slurred group,
-- any other group of cells.
+- any other group of notes.
 
 ## Slurs and spans
 
@@ -88,11 +90,11 @@ When voices divide the same pulse differently, their notes cannot be aligned one
 [1] do    mi fa
 ```
 
-The first pulse has two soprano notes and one alto note. The lyric token `do` covers the whole pulse, so it is sung over both soprano notes and the single alto note. The same rule applies whenever voices have different beat divisions inside a pulse. This pulse-wide attachment is the main exception to the default one-token-per-cell rule.
+The first pulse has two soprano notes and one alto note. The lyric token `do` covers the whole pulse, so it is sung over both soprano notes and the single alto note. The same rule applies whenever voices have different beat divisions inside a pulse. This pulse-wide attachment is the main exception to the default one-token-per-note rule.
 
 ## Placeholders
 
-The placeholder `~` reserves a cell without rendering text. It should be used for rests, not to skip a real note:
+The placeholder `~` reserves a note without rendering text. It should be used for empty notes, not to skip a real note:
 
 ```voxalfa fragment
 [S] |d : !m :f ||
@@ -101,7 +103,7 @@ The placeholder `~` reserves a cell without rendering text. It should be used fo
 
 Above, the second pulse is empty, so `~` reserves it and `mi`/`fa` stay aligned with the following notes.
 
-Placeholders accept the span modifier too: `~@4` reserves four empty cells without text. This is useful when a voice has empty cells before its lyrics:
+Placeholders accept the span modifier too: `~@4` reserves four empty notes without text. This is useful when a voice has empty notes before its lyrics:
 
 ```voxalfa fragment
 [S] | : | : |d :r .r ||
@@ -124,7 +126,7 @@ To give each voice its own lyrics, put each voice and its lyric line in a separa
 
 Sub-sections are simultaneous: they split the declarations of one section, not the timeline. Use this when voices need different texts or independent dynamics.
 
-If a declared voice is silent in a section, still write its line with rests and reserve its lyric cells with placeholders:
+If a declared voice is silent in a section, still write its line with rests and reserve its lyric notes with placeholders:
 
 ```voxalfa fragment
 [S] | : | : |d :r .r ||
@@ -188,9 +190,9 @@ Operators may be used inside a group.
 
 ## Anchors
 
-The anchor `@@` links the last token of a lyric line to the first token of the next section. It must be preceded by an operator (space, `_`, or `\`).
+The anchor `@@` is needed to chain the trailing operator of a lyric line to the lyrics of the next section. This is especially important for a space, which has no visible character: without `@@`, the trailing space cannot be seen or carried across the boundary. It must be preceded by an operator (space, `_`, or `\`).
 
-In a document with multiple sections, **every lyric line in a non-final section must end with an anchor**, even if the text does not visually continue. The compiler enforces this. The final section must not have an anchor.
+In a file with multiple sections, **every lyric line in a non-final section must end with an anchor**, even if the text does not visually continue. The final section must not have an anchor.
 
 ```voxalfa fragment
 [S] |d :r !m :f ||
@@ -230,7 +232,7 @@ Backticks underline the text that corresponds to a slur. Surround a range to und
 [1] `do re mi fa`
 ```
 
-If the slurred group spans multiple cells and has a single lyric token, put the span outside the backticks:
+If the slurred group spans multiple notes and has a single lyric token, put the span outside the backticks:
 
 ```voxalfa fragment
 [S] |`s .d+1` :t .r+1 ||

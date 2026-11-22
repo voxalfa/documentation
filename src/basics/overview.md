@@ -1,6 +1,6 @@
 # Overview
 
-Voxalfa is a directive, line-based language. Every line starts with a **marker** in square brackets that selects the kind of declaration; the rest of the line contains the declaration itself. This keeps the syntax regular and independent of indentation or visual alignment.
+Voxalfa is a declarative, line-based language. Voxalfa files use the `.vfa` extension. Declarations never span multiple lines, and each one starts with a short marker in square brackets, such as `[#]`. The marker says what the line is for. There are no indentation or space-based rules.
 
 ## Markers
 
@@ -8,16 +8,18 @@ Voxalfa is a directive, line-based language. Every line starts with a **marker**
 | -------------------------- | -------------------------------------------------------------- |
 | `[#]`                      | Header metadata.                                               |
 | `[$]`                      | Parameters, either in the header or at the start of a section. |
-| `[S]`, `[A]`, `[T]`, `[B]` | Solfa lines for the voices declared in `voices`.               |
+| `[S]`, `[A]`, `[T]`, `[B]` | Solfa lines for the voices declared in the [header](./header/parameters.md#voices). |
 | `[1]`, `[2]`, `[3]`, ...   | Lyrics for the corresponding verse.                            |
 | `[*]`                      | Wildcard lyrics, shared by every verse.                        |
 
-A marker is followed by either a key-value list or a token list:
+## Declarations
 
-- **Key-value declarations** assign values to names, for example `key={C}` or `title="Hello"`.
-- **Token-list declarations** use the custom syntax of solfa and lyric lines, for example `|d :r !m :f ||`.
+A marker is followed by either assignments or content.
 
-Multiple key-value assignments can be chained on one line with `|`:
+- **Assignments** use `key=value`, such as `key={C}` or `title="Hello"`.
+- **Solfa and lyric lines** use their own token syntax, such as `|d :r !m :f ||`.
+
+You can put several assignments on one line, separated by `|`:
 
 ```voxalfa fragment
 [#] title="Hello" | language="en" | verses={1}
@@ -40,7 +42,7 @@ Language directives start with `;; @` and are documented in [Directives](./direc
 
 ## Header and body
 
-A document has two parts separated by `---`:
+A Voxalfa file has two parts separated by `---`:
 
 ```voxalfa
 ;; @version 0.1.0-alpha
@@ -63,7 +65,7 @@ The **body** contains sections. Each section holds one or more sub-sections with
 
 ## Whitespace and alignment
 
-Voxalfa is line-oriented, but alignment inside a line is purely visual. Extra spaces between tokens do not change the meaning of a score. The four lines below are deliberately misaligned:
+Spacing is only for readability. These deliberately misaligned lines describe the same music:
 
 ```voxalfa fragment
 [S] |d     .,d   :t-1     .,t-1 !d    : ||
@@ -72,7 +74,7 @@ Voxalfa is line-oriented, but alignment inside a line is purely visual. Extra sp
 [B] |s-1        .,s-1 :s-1        .,s-1 !d-1 : ||
 ```
 
-They still describe the same four pulses for each voice. You can align them by hand for readability, or let the formatter normalize the spacing with `voxalfa format`.
+You can align them by hand, or let `voxalfa format` normalize the spacing.
 
 Lyrics do not have to be aligned with the solfa line either. They are matched to notes from left to right:
 

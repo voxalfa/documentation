@@ -14,6 +14,8 @@ Metadata lines use the `[#]` marker and describe the score. They are fully typed
 | `description` | string                | Short description.                       |
 | `tags`        | string list           | Searchable tags.                         |
 
+`verses` defaults to `0`, so a file without lyrics does not need to declare it. Other metadata fields are optional.
+
 ## Example
 
 ```voxalfa fragment

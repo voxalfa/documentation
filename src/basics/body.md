@@ -1,80 +1,19 @@
 # Body
 
-The body is the part of a document after the `---` separator. It contains the music: solfa lines, lyrics, and the parameters that change during the score.
+The body is the part of a Voxalfa file after the `---` separator. It contains the music: solfa lines, lyrics, and the parameters that change during the score.
 
 ## Sections
 
-Sections are purely arbitrary building blocks. They organize source lines and control how pulse indices continue, but they are independent of the final rendering: the renderer decides where to break systems and pages, except where a major section is explicitly marked.
+The body is divided into sections, and sections can be split into sub-sections. Separators define how the music is grouped and how pulse indices continue.
 
-A section can contain a single pulse or many pulses. It is a logical grouping, not a fixed number of measures.
+| Separator | Meaning                                                       |
+| --------- | ------------------------------------------------------------- |
+| `--`      | Start a new section and restart pulse indices.                |
+| `<<`      | Start a merged section and continue pulse indices.            |
+| `==`      | Major section break, rendered as a double barline.            |
+| `++`      | Start a sub-section; pulse indices continue.                  |
 
-Some parameters require starting a new section because they apply relative to its beginning or end: time signature, key, tempo, marks, and jumps. Other declarations, such as solfa lines and lyrics, can be split across sub-sections inside the same section.
-
-### New sections with `--`
-
-`--` starts a new section and restarts pulse indices at `0`:
-
-```voxalfa fragment
-;    0  1  2  3
-[S] |d :r !m :f ||
-
---
-
-;    0  1  2  3
-[S] |s :l !t :d+1 ||
-```
-
-### Merged sections with `<<`
-
-`<<` starts a new section but continues the pulse indices from the previous section:
-
-```voxalfa fragment
-;    0  1  2  3
-[S] |d :r !m :f ||
-
-<<
-
-;    4  5  6  7
-[S] |s :l !t :d+1 ||
-```
-
-A merged section must use the same voice structure as the section it continues.
-
-Merging is mainly useful for pulse indexing: it lets a dynamic range continue across a section boundary. If you only want a new section, use `--` or `==`. See [Pulse indices across sections](./data-types.md#pulse-indices-across-sections).
-
-### Major sections with `==`
-
-`==` starts a major section. The previous section ends a larger structural block, and pulse indices restart:
-
-```voxalfa fragment
-;    0  1  2  3
-[S] |d :r !m :f ||
-
-==
-
-;    0  1  2  3
-[S] |s :l !t :d+1 ||
-```
-
-### Sub-sections with `++`
-
-`++` splits the declarations of one section into sub-sections. Pulse indices continue across sub-sections, but each sub-section can contain a different set of voices and lyrics:
-
-```voxalfa fragment
-[S] |d :r !m :f ||
-[A] |d :r !m :f ||
-
-[1] do re mi fa
-
-++
-
-[T] |d :r !m :f ||
-[B] |d :r !m :f ||
-
-[1] do re mi fa
-```
-
-Sub-sections are also how per-voice lyrics and independent `dynamics` markings are written.
+See [Sections](./body/sections.md) for merged sections, major sections, sub-sections, and pulse indexing.
 
 ## Section parameters
 

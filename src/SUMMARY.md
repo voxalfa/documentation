@@ -17,6 +17,7 @@
 - [Directives](./basics/directives.md)
   - [Styling](./basics/directives/styling.md)
 - [Body](./basics/body.md)
+  - [Sections](./basics/body/sections.md)
   - [Parameters](./basics/body/parameters.md)
   - [Solfa](./basics/body/solfa.md)
   - [Lyrics](./basics/body/lyrics.md)

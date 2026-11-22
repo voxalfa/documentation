@@ -17,7 +17,7 @@ The voice must be declared in `voices` in the header. The marker selects which v
 
 ## Pulses and accents
 
-A **pulse** is the basic rhythmic unit of a solfa line. Each pulse starts with an accent:
+A **pulse** is one beat. The time signature denominator defines the note value of that beat: in `4/4` a pulse is a quarter note, while in `6/8` a pulse is an eighth note. Each pulse starts with an accent:
 
 | Accent | Meaning |
 | --- | --- |
@@ -33,7 +33,7 @@ A **pulse** is the basic rhythmic unit of a solfa line. Each pulse starts with a
 
 ## Rests
 
-A pulse with an accent but no note is a rest. Rests occupy time and count as lyric cells.
+A pulse with an accent but no note is a rest. Rests occupy time and count as lyric notes.
 
 ```voxalfa fragment
 [S] |d : !m :f ||
@@ -51,7 +51,7 @@ A pulse can also be partially silent. In `: .s`, the weak pulse has a rest on it
 [S] |d : .s ||
 ```
 
-Rests matter for pulse indices and lyrics: they advance the index and occupy a lyric cell. Use placeholders such as `~` or `~@4` in lyrics to reserve cells without rendering text (see [Lyrics](./lyrics.md#placeholders)).
+Rests matter for pulse indices and lyrics: they advance the index and occupy a lyric note. Use placeholders such as `~` or `~@4` in lyrics to reserve notes without rendering text (see [Lyrics](./lyrics.md#placeholders)).
 
 ## Notes
 
@@ -95,10 +95,10 @@ The parts can be combined:
 
 A pulse can contain multiple notes. Beat dividers describe how the pulse is divided:
 
-| Divider | Duration |
+| Divider | Meaning |
 | --- | --- |
-| `,` | Quarter (1/4). |
-| `.` | Half (1/2). |
+| `,` | Quarter division (1/4), also used as the explicit divider for thirds. |
+| `.` | Half division (1/2). |
 | `.,` | Three quarters (3/4), followed by one quarter. |
 
 Successive notes without a divider are divided equally:
@@ -117,11 +117,13 @@ Three consecutive notes form an implicit triplet:
 [S] |d r m :f .s !l t d+1 :r ||
 ```
 
-The same result can be written with explicit quarter marks:
+The same result can be written with explicit division marks:
 
 ```voxalfa fragment
 [S] |d ,r ,m :f .s !l ,t ,d+1 :r ||
 ```
+
+In `|d ,r ,m`, `,` acts as the explicit divider for thirds, even though its primary meaning is a quarter division.
 
 A dotted rhythm uses a half division followed by a quarter division:
 

@@ -1,6 +1,6 @@
 # Header
 
-The header is the part of a document before the `---` separator. It contains static metadata and initial playback parameters.
+The header is the part of a Voxalfa file before the `---` separator. It contains static metadata and initial playback parameters.
 
 ```voxalfa fragment
 [#] title="Hello, Voxalfa"

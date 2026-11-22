@@ -24,13 +24,13 @@ Values use the same [data types](./data-types.md) as metadata and parameters: st
 
 ## Version
 
-The optional `version` directive declares which compiler version the document targets:
+The optional `version` directive declares which compiler version the file targets:
 
 ```voxalfa fragment
 ;; @version 0.1.0-alpha
 ```
 
-It is validated when present. A document written for an incompatible version produces a diagnostic.
+It is validated when present. A file written for an incompatible version produces a diagnostic.
 
 ## Styling
 
