@@ -1,19 +1,30 @@
 # Body
 
-The body is the part of a Voxalfa file after the `---` separator. It contains the music: solfa lines, lyrics, and the parameters that change during the score.
+The body is the part of a Voxalfa file after the `---` separator. It is composed of sections, each containing solfa lines, lyrics, and the parameters that change during the score.
 
 ## Sections
 
-The body is divided into sections, and sections can be split into sub-sections. Separators define how the music is grouped and how pulse indices continue.
+Sections are the building blocks of a score. Each section groups the voices and lyrics that belong together, keeping the score modular and reusable; page and system breaks are left to the renderer.
 
-| Separator | Meaning                                                       |
-| --------- | ------------------------------------------------------------- |
-| `--`      | Start a new section and restart pulse indices.                |
-| `<<`      | Start a merged section and continue pulse indices.            |
-| `==`      | Major section break, rendered as a double barline.            |
-| `++`      | Start a sub-section; pulse indices continue.                  |
+Sections can also override parameters. Key, time signature, and tempo stay in effect from that section onward until changed again:
 
-See [Sections](./body/sections.md) for merged sections, major sections, sub-sections, and pulse indexing.
+```voxalfa fragment
+[$] key={C} | tempo={100}
+
+[S] |d :r !m :f ||
+
+[1] do re mi fa @@
+
+--
+
+[$] key={G} | tempo={120}
+
+[S] |s :l !t :d+1 ||
+
+[1] so la ti do @@
+```
+
+See [Sections](./body/sections.md) to learn more.
 
 ## Section parameters
 
@@ -22,6 +33,8 @@ Parameters at the start of a section use the `[$]` marker and can override the h
 ```voxalfa fragment
 [$] key={G} | time={3,4} | tempo={110} | label="Verse" | mark={S}
 ```
+
+`key`, `tempo`, `jump`, `mark`, `touches`, `barline`, and `dynamics` are indexable and can target a specific note with an [index](./body/indexing.md).
 
 See [Body Parameters](./body/parameters.md) for the complete list.
 

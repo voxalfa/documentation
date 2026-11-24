@@ -1,15 +1,15 @@
 # Parameters
 
-Initial parameters use the `[$]` marker and control how the score is played. They may only appear in the header.
+Initial parameters use the `[$]` marker and set the starting key, time signature, tempo, and available voices. Key, time, and tempo can be overridden later in sections.
 
 | Parameter | Type                    | Description                                                 |
 | --------- | ----------------------- | ----------------------------------------------------------- |
-| `key`     | key                     | Initial [key signature](../data-types.md#keys).             |
+| `key`     | key                     | Initial [key signature](../builtins.md#keys).             |
 | `time`    | number list of length 2 | Time signature, for example `{4,4}`.                        |
-| `tempo`   | static tempo            | Initial [tempo](../data-types.md#tempos) name or BPM value. |
-| `voices`  | voice list              | [Voices](../data-types.md#voices) available in the body.    |
+| `tempo`   | static tempo            | Initial [tempo](../builtins.md#tempos) name or BPM value. |
+| `voices`  | voice list              | [Voices](../builtins.md#voices) available in the body.    |
 
-`time` and `voices` are required when the body contains solfa lines. For playback, `key` and `tempo` are also required.
+Header parameters are not indexed. `time` and `voices` are required when the body contains solfa lines. For playback, `key` and `tempo` are also required.
 
 ```voxalfa fragment
 [$] key={Eb} | time={3,4} | tempo={70} | voices={S,A,T,B}
@@ -25,7 +25,7 @@ Initial parameters use the `[$]` marker and control how the score is played. The
 [$] key={Bb}
 ```
 
-See [Keys](../data-types.md#keys) for the full syntax.
+See [Keys](../builtins.md#keys) for the full syntax.
 
 ## Time signature
 
@@ -37,7 +37,7 @@ The time signature is a two-element list: the number of beats per measure and th
 [$] time={6,8}
 ```
 
-The time signature determines the expected accents inside each measure. In `4/4`, the first pulse is strong (`|`), the third is medium (`!`), and the others are weak (`:`).
+The time signature sets the number of pulses in a measure and the accents expected inside it. See [Pulses and accents](../body/solfa.md#pulses-and-accents) for how accents are written.
 
 ## Tempo
 
@@ -46,7 +46,7 @@ The time signature determines the expected accents inside each measure. In `4/4`
 [$] tempo={100}
 ```
 
-See [Tempos](../data-types.md#tempos) for the available names.
+See [Tempos](../builtins.md#tempos) for the available names.
 
 ## Voices
 
@@ -55,4 +55,4 @@ See [Tempos](../data-types.md#tempos) for the available names.
 [$] voices={S,A}
 ```
 
-The `voices` list is an ordered pattern of soprano, alto, tenor, and bass parts. It is not limited to SATB: use any sequence, such as `{S,A,T}` or `{S,S,A,A,T,T}` (SSAATT). Solfa lines in each section must appear in the same order as this list. See [Voices](../data-types.md#voices) for the available voice names.
+The `voices` list is an ordered pattern of soprano, alto, tenor, and bass parts. It is not limited to SATB: use any sequence, such as `{S,A,T}` or `{S,S,A,A,T,T}` (SSAATT). Solfa lines in each section must appear in the same order as this list. See [Voices](../builtins.md#voices) for the available voice names.

@@ -14,13 +14,16 @@
 - [Header](./basics/header.md)
   - [Metadata](./basics/header/metadata.md)
   - [Parameters](./basics/header/parameters.md)
-- [Directives](./basics/directives.md)
-  - [Styling](./basics/directives/styling.md)
 - [Body](./basics/body.md)
   - [Sections](./basics/body/sections.md)
-  - [Parameters](./basics/body/parameters.md)
   - [Solfa](./basics/body/solfa.md)
   - [Lyrics](./basics/body/lyrics.md)
+  - [Advanced lyric alignment](./basics/body/lyrics-alignment.md)
+  - [Parameters](./basics/body/parameters.md)
+  - [Indexing system](./basics/body/indexing.md)
+- [Builtins](./basics/builtins.md)
+- [Directives](./basics/directives.md)
+  - [Styling](./basics/directives/styling.md)
 
 # Examples
 

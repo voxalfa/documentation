@@ -31,6 +31,8 @@ A **pulse** is one beat. The time signature denominator defines the note value o
 ;    |  :  !  :
 ```
 
+In `4/4`, the first pulse is strong (`|`), the third is medium (`!`), and the others are weak (`:`). In `3/4`, only the first pulse is strong. The compiler and renderer use the time signature to validate and display the score, but accents are always written explicitly in the solfa line.
+
 ## Rests
 
 A pulse with an accent but no note is a rest. Rests occupy time and count as lyric notes.
@@ -51,7 +53,7 @@ A pulse can also be partially silent. In `: .s`, the weak pulse has a rest on it
 [S] |d : .s ||
 ```
 
-Rests matter for pulse indices and lyrics: they advance the index and occupy a lyric note. Use placeholders such as `~` or `~@4` in lyrics to reserve notes without rendering text (see [Lyrics](./lyrics.md#placeholders)).
+Rests matter for indexing and lyrics: they advance the index and occupy a lyric note. Use placeholders such as `~` or `~@4` in lyrics to reserve notes without rendering text (see [Lyrics](./lyrics.md#placeholders)).
 
 ## Notes
 
@@ -150,21 +152,3 @@ In lyrics, the same marker underlines the text that corresponds to the slur:
 ```voxalfa fragment
 [1] `do re mi fa`
 ```
-
-## Time signature and accents
-
-The time signature determines where strong and medium accents belong. In `4/4`, the first pulse is strong (`|`), the third is medium (`!`), and the remaining pulses are weak (`:`):
-
-```voxalfa fragment
-;    1    2    3    4
-[S] |d   :r   !m   :f ||
-```
-
-In `3/4`, the first pulse is strong and the second and third are weak:
-
-```voxalfa fragment
-;    1    2    3
-[S] |d   :r   :m ||
-```
-
-The compiler and renderer use the time signature to validate and display the score, but the accents are written explicitly in the solfa line.
