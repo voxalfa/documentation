@@ -23,7 +23,7 @@
   - [Indexing system](./basics/body/indexing.md)
 - [Builtins](./basics/builtins.md)
 - [Directives](./basics/directives.md)
-  - [Styling](./basics/directives/styling.md)
+- [Styling](./basics/styling.md)
 
 # Examples
 

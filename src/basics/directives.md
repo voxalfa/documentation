@@ -6,7 +6,7 @@ Directives provide compiler and rendering context. They use the `;; @` prefix an
 ;; @version 0.1.0-alpha
 
 ;; @page width={200} | height={1000}
-;; @lyrics-text font-size={10} | font-style="italic"
+;; @style name="lyrics-text" | font-size={10} | font-style="italic"
 ```
 
 A directive starts with `;; @`, followed by its name and a value:
@@ -32,6 +32,4 @@ The optional `version` directive declares which compiler version the file target
 
 It is validated when present. A file written for an incompatible version produces a diagnostic.
 
-## Styling
-
-The `page` directive and the element directives customize rendered output. They are documented in [Styling](./directives/styling.md).
+Page, style, and header layout directives are covered in [Styling](./styling.md).

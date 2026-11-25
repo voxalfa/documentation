@@ -66,7 +66,7 @@
     }
     .divider-text {
       font-family: 'Fira Sans', sans-serif;
-      font-size: 10.20px;
+      font-size: 12.00px;
       font-weight: 700;
       font-style: normal;
       fill: black;
@@ -107,16 +107,30 @@
       font-style: normal;
       fill: black;
     }
+    .header-text {
+      font-family: 'Noto Sans', sans-serif;
+      font-size: 13.00px;
+      font-weight: 400;
+      font-style: normal;
+      fill: black;
+    }
+    .header-row {
+      font-family: 'Noto Sans', sans-serif;
+      font-size: 13.00px;
+      font-weight: 400;
+      font-style: normal;
+      fill: black;
+    }
     .key-text {
       font-family: 'Noto Sans', 'Noto Sans Symbols', sans-serif;
-      font-size: 12.00px;
+      font-size: 11.00px;
       font-weight: 700;
       font-style: normal;
       fill: black;
     }
     .time-text {
       font-family: 'Noto Sans', sans-serif;
-      font-size: 12.00px;
+      font-size: 11.00px;
       font-weight: 400;
       font-style: normal;
       fill: black;
@@ -130,56 +144,56 @@
     }
     .key-label {
       font-family: 'Noto Sans', 'Noto Sans Symbols', sans-serif;
-      font-size: 12.00px;
+      font-size: 11.00px;
       font-weight: 700;
       font-style: normal;
       fill: black;
     }
     .jump-label {
       font-family: 'Noto Sans', sans-serif;
-      font-size: 12.00px;
+      font-size: 11.00px;
       font-weight: 700;
       font-style: normal;
       fill: black;
     }
     .tempo-label {
       font-family: 'Noto Serif', serif;
-      font-size: 12.00px;
+      font-size: 11.00px;
       font-weight: 400;
       font-style: italic;
       fill: black;
     }
     .bpm-label {
       font-family: 'Noto Serif', serif;
-      font-size: 12.00px;
+      font-size: 11.00px;
       font-weight: 400;
       font-style: normal;
       fill: black;
     }
     .mark-label {
       font-family: 'Noto Serif', serif;
-      font-size: 12.00px;
+      font-size: 11.00px;
       font-weight: 400;
       font-style: italic;
       fill: black;
     }
     .dynamic-label {
       font-family: 'Noto Serif', serif;
-      font-size: 10.80px;
+      font-size: 11.00px;
       font-weight: 700;
       font-style: italic;
       fill: black;
     }
     .time-label {
       font-family: 'Noto Sans', sans-serif;
-      font-size: 12.00px;
+      font-size: 11.00px;
       font-weight: 400;
       font-style: normal;
       fill: black;
     }
     .volta-label {
       font-family: 'Noto Sans', sans-serif;
-      font-size: 12.00px;
+      font-size: 11.00px;
       font-weight: 700;
       font-style: normal;
       fill: black;
@@ -245,154 +259,154 @@
 </defs>
 <rect x="0" y="0" width="794.00" height="1123.00" fill="#ffffff"/>
 <text x="397.00" y="81.22" text-anchor="middle" class="title-text">Follow me</text>
-<text x="737.30" y="127.77" text-anchor="end" class="author-text">Daniel Batchellor</text>
-<text x="56.70" y="127.77" text-anchor="start" class="key-text">Do is G</text>
-<text x="127.56" y="127.77" text-anchor="start" class="time-text">4/4</text>
-<text x="175.75" y="127.77" text-anchor="start" class="tempo-label">adagio.</text>
-<text x="82.18" y="183.63" text-anchor="middle" class="dynamic-label">f</text>
-<g class="marker marker-segno" transform="translate(78.37 158.19) scale(3.8136)"><path transform="matrix(0.004,0,0,-0.004,1,1.5)" d="m -202,-50 c 0,17 13,30 30,30 17,0 30,-13 30,-30 0,-17 -13,-30 -30,-30 -17,0 -30,13 -30,30 z M 142,50 c 0,17 13,30 30,30 17,0 30,-13 30,-30 0,-17 -13,-30 -30,-30 -17,0 -30,13 -30,30 z M -35,-227 c 0,34 17,59 54,59 39,0 58,-31 58,-62 0,-27 -15,-55 -40,-64 8,-29 36,-51 69,-51 38,0 66,35 66,75 0,99 -83,168 -172,219 l -190,-324 -60,0 204,349 c -104,58 -204,132 -204,245 0,86 62,156 144,156 79,0 141,-68 141,-148 0,-34 -17,-59 -54,-59 -39,0 -58,31 -58,62 0,27 15,55 40,64 -8,29 -36,51 -69,51 -38,0 -66,-35 -66,-75 0,-99 83,-168 172,-219 l 190,324 60,0 L 46,26 c 104,-58 204,-132 204,-245 0,-86 -62,-156 -144,-156 -79,0 -141,68 -141,148 z" fill="#333333"/></g>
-<text x="721.50" y="183.28" text-anchor="end" class="jump-label">D.S.</text>
-<text x="248.59" y="263.16" text-anchor="middle" class="dynamic-label">p</text>
-<text x="82.18" y="212.36" text-anchor="middle" class="note-text">d</text>
-<text x="114.66" y="212.36" text-anchor="middle" class="divider-text">:</text>
-<text x="121.58" y="212.36" text-anchor="middle" class="note-text">t</text>
-<text x="127.87" y="216.89" text-anchor="middle" class="octave-text">1</text>
-<line x1="155.77" y1="199.00" x2="155.77" y2="215.00" class="medium-accent"/>
-<text x="164.41" y="212.36" text-anchor="middle" class="note-text">d</text>
-<text x="196.88" y="212.36" text-anchor="middle" class="divider-text">:</text>
-<text x="203.93" y="212.36" text-anchor="middle" class="note-text">r</text>
-<text x="248.59" y="212.36" text-anchor="middle" class="note-text">m</text>
-<text x="279.10" y="212.36" text-anchor="middle" class="divider-text">:</text>
-<text x="285.79" y="212.36" text-anchor="middle" class="note-text">f</text>
-<line x1="320.22" y1="199.00" x2="320.22" y2="215.00" class="medium-accent"/>
-<text x="330.82" y="212.36" text-anchor="middle" class="note-text">m</text>
-<text x="361.33" y="212.36" text-anchor="middle" class="divider-text">:</text>
-<text x="368.38" y="212.36" text-anchor="middle" class="note-text">r</text>
-<text x="411.08" y="212.36" text-anchor="middle" class="note-text">d</text>
-<text x="443.55" y="212.36" text-anchor="middle" class="divider-text">:</text>
-<text x="450.48" y="212.36" text-anchor="middle" class="note-text">t</text>
-<text x="456.77" y="216.89" text-anchor="middle" class="octave-text">1</text>
-<line x1="484.66" y1="199.00" x2="484.66" y2="215.00" class="medium-accent"/>
-<text x="493.30" y="212.36" text-anchor="middle" class="note-text">d</text>
-<text x="525.78" y="212.36" text-anchor="middle" class="divider-text">:</text>
-<text x="532.82" y="212.36" text-anchor="middle" class="note-text">r</text>
-<text x="577.49" y="212.36" text-anchor="middle" class="note-text">m</text>
-<text x="608.00" y="212.36" text-anchor="middle" class="divider-text">:</text>
-<text x="614.69" y="212.36" text-anchor="middle" class="note-text">f</text>
-<line x1="649.11" y1="199.00" x2="649.11" y2="215.00" class="medium-accent"/>
-<text x="659.71" y="212.36" text-anchor="middle" class="note-text">m</text>
-<text x="690.22" y="212.36" text-anchor="middle" class="divider-text">:</text>
-<text x="77.38" y="241.16" text-anchor="start" class="lyrics-text">Fol-</text>
-<text x="118.50" y="241.16" text-anchor="start" class="lyrics-text">low,</text>
-<text x="159.61" y="241.16" text-anchor="start" class="lyrics-text">me</text>
-<text x="200.72" y="241.16" text-anchor="start" class="lyrics-text">come</text>
-<text x="241.83" y="241.16" text-anchor="start" class="lyrics-text">Fol-</text>
-<text x="282.94" y="241.16" text-anchor="start" class="lyrics-text">low</text>
-<text x="324.06" y="241.16" text-anchor="start" class="lyrics-text">me,</text>
-<text x="365.17" y="241.16" text-anchor="start" class="lyrics-text">and</text>
-<text x="406.28" y="241.16" text-anchor="start" class="lyrics-text">we</text>
-<text x="447.39" y="241.16" text-anchor="start" class="lyrics-text">will</text>
-<text x="488.50" y="241.16" text-anchor="start" class="lyrics-text">sing</text>
-<text x="529.62" y="241.16" text-anchor="start" class="lyrics-text">in</text>
-<text x="570.73" y="241.16" text-anchor="start" class="lyrics-text">har-</text>
-<text x="611.84" y="241.16" text-anchor="start" class="lyrics-text">mo-</text>
-<text x="652.95" y="241.16" text-anchor="start" class="lyrics-text">ny.</text>
-<text x="114.66" y="288.30" text-anchor="middle" class="divider-text">:</text>
-<line x1="155.77" y1="274.94" x2="155.77" y2="290.94" class="medium-accent"/>
-<text x="196.88" y="288.30" text-anchor="middle" class="divider-text">:</text>
-<text x="246.63" y="288.30" text-anchor="middle" class="note-text">d</text>
-<text x="279.10" y="288.30" text-anchor="middle" class="divider-text">:</text>
-<text x="286.03" y="288.30" text-anchor="middle" class="note-text">t</text>
-<text x="292.32" y="292.84" text-anchor="middle" class="octave-text">1</text>
-<line x1="320.22" y1="274.94" x2="320.22" y2="290.94" class="medium-accent"/>
-<text x="328.86" y="288.30" text-anchor="middle" class="note-text">d</text>
-<text x="361.33" y="288.30" text-anchor="middle" class="divider-text">:</text>
-<text x="368.38" y="288.30" text-anchor="middle" class="note-text">r</text>
-<text x="413.04" y="288.30" text-anchor="middle" class="note-text">m</text>
-<text x="443.55" y="288.30" text-anchor="middle" class="divider-text">:</text>
-<text x="450.24" y="288.30" text-anchor="middle" class="note-text">f</text>
-<line x1="484.66" y1="274.94" x2="484.66" y2="290.94" class="medium-accent"/>
-<text x="495.26" y="288.30" text-anchor="middle" class="note-text">m</text>
-<text x="525.78" y="288.30" text-anchor="middle" class="divider-text">:</text>
-<text x="532.82" y="288.30" text-anchor="middle" class="note-text">r</text>
-<text x="575.53" y="288.30" text-anchor="middle" class="note-text">d</text>
-<text x="608.00" y="288.30" text-anchor="middle" class="divider-text">:</text>
-<text x="614.93" y="288.30" text-anchor="middle" class="note-text">t</text>
-<text x="621.22" y="292.84" text-anchor="middle" class="octave-text">1</text>
-<line x1="649.11" y1="274.94" x2="649.11" y2="290.94" class="medium-accent"/>
-<text x="657.75" y="288.30" text-anchor="middle" class="note-text">d</text>
-<text x="690.22" y="288.30" text-anchor="middle" class="divider-text">:</text>
-<text x="241.83" y="317.10" text-anchor="start" class="lyrics-text">We</text>
-<text x="282.94" y="317.10" text-anchor="start" class="lyrics-text">will</text>
-<text x="324.06" y="317.10" text-anchor="start" class="lyrics-text">fol-</text>
-<text x="365.17" y="317.10" text-anchor="start" class="lyrics-text">low</text>
-<text x="406.28" y="317.10" text-anchor="start" class="lyrics-text">we</text>
-<text x="447.39" y="317.10" text-anchor="start" class="lyrics-text">will</text>
-<text x="488.50" y="317.10" text-anchor="start" class="lyrics-text">sing</text>
-<text x="529.62" y="317.10" text-anchor="start" class="lyrics-text">in</text>
-<text x="570.73" y="317.10" text-anchor="start" class="lyrics-text">har-</text>
-<text x="611.84" y="317.10" text-anchor="start" class="lyrics-text">mo-</text>
-<text x="652.95" y="317.10" text-anchor="start" class="lyrics-text">ny.</text>
-<line x1="69.70" y1="199.00" x2="69.70" y2="316.39" class="barline"/>
-<line x1="234.15" y1="199.00" x2="234.15" y2="316.39" class="barline"/>
-<line x1="398.60" y1="199.00" x2="398.60" y2="316.39" class="barline"/>
-<line x1="563.05" y1="199.00" x2="563.05" y2="316.39" class="barline"/>
-<path d="M 66.50 199.00 Q 64.10 199.00 64.10 202.60 L 64.10 254.10 Q 64.10 257.70 61.70 257.70 Q 64.10 257.70 64.10 261.30 L 64.10 312.79 Q 64.10 316.39 66.50 316.39" class="brace"/>
-<path d="M 727.50 199.00 Q 729.90 199.00 729.90 202.60 L 729.90 254.10 Q 729.90 257.70 732.30 257.70 Q 729.90 257.70 729.90 261.30 L 729.90 312.79 Q 729.90 316.39 727.50 316.39" class="brace"/>
-<text x="412.28" y="183.28" text-anchor="start" class="volta-label">1.</text>
-<line x1="406.28" y1="167.45" x2="727.50" y2="167.45" class="volta"/>
-<line x1="406.28" y1="167.45" x2="406.28" y2="183.28" class="volta"/>
-<line x1="727.50" y1="167.45" x2="727.50" y2="183.28" class="volta"/>
-<text x="82.18" y="379.30" text-anchor="middle" class="note-text">d</text>
-<text x="114.66" y="379.30" text-anchor="middle" class="divider-text">:</text>
-<text x="121.58" y="379.30" text-anchor="middle" class="note-text">t</text>
-<text x="127.87" y="383.83" text-anchor="middle" class="octave-text">1</text>
-<line x1="155.77" y1="365.94" x2="155.77" y2="381.94" class="medium-accent"/>
-<text x="164.41" y="379.30" text-anchor="middle" class="note-text">d</text>
-<text x="196.88" y="379.30" text-anchor="middle" class="divider-text">:</text>
-<text x="203.93" y="379.30" text-anchor="middle" class="note-text">r</text>
-<text x="248.59" y="379.30" text-anchor="middle" class="note-text">m</text>
-<text x="279.10" y="379.30" text-anchor="middle" class="divider-text">:</text>
-<text x="285.79" y="379.30" text-anchor="middle" class="note-text">f</text>
-<line x1="320.22" y1="365.94" x2="320.22" y2="381.94" class="medium-accent"/>
-<text x="330.82" y="379.30" text-anchor="middle" class="note-text">m</text>
-<text x="361.33" y="379.30" text-anchor="middle" class="divider-text">:</text>
-<text x="368.96" y="379.30" text-anchor="middle" class="note-text">-</text>
-<text x="77.38" y="408.10" text-anchor="start" class="lyrics-text">we</text>
-<text x="118.50" y="408.10" text-anchor="start" class="lyrics-text">will</text>
-<text x="159.61" y="408.10" text-anchor="start" class="lyrics-text">sing</text>
-<text x="200.72" y="408.10" text-anchor="start" class="lyrics-text">in</text>
-<text x="241.83" y="408.10" text-anchor="start" class="lyrics-text">har-</text>
-<text x="282.94" y="408.10" text-anchor="start" class="lyrics-text">mo-</text>
-<text x="324.06" y="408.10" text-anchor="start" class="lyrics-text">ny.</text>
-<text x="84.14" y="436.75" text-anchor="middle" class="note-text">m</text>
-<text x="114.66" y="436.75" text-anchor="middle" class="divider-text">:</text>
-<text x="121.34" y="436.75" text-anchor="middle" class="note-text">f</text>
-<line x1="155.77" y1="423.39" x2="155.77" y2="439.39" class="medium-accent"/>
-<text x="166.37" y="436.75" text-anchor="middle" class="note-text">m</text>
-<text x="196.88" y="436.75" text-anchor="middle" class="divider-text">:</text>
-<text x="203.93" y="436.75" text-anchor="middle" class="note-text">r</text>
-<text x="246.63" y="436.75" text-anchor="middle" class="note-text">d</text>
-<text x="279.10" y="436.75" text-anchor="middle" class="divider-text">:</text>
-<text x="286.03" y="436.75" text-anchor="middle" class="note-text">t</text>
-<text x="292.32" y="441.29" text-anchor="middle" class="octave-text">1</text>
-<line x1="320.22" y1="423.39" x2="320.22" y2="439.39" class="medium-accent"/>
-<text x="328.86" y="436.75" text-anchor="middle" class="note-text">d</text>
-<text x="361.33" y="436.75" text-anchor="middle" class="divider-text">:</text>
-<text x="368.96" y="436.75" text-anchor="middle" class="note-text">-</text>
-<text x="77.38" y="465.55" text-anchor="start" class="lyrics-text">we</text>
-<text x="118.50" y="465.55" text-anchor="start" class="lyrics-text">will</text>
-<text x="159.61" y="465.55" text-anchor="start" class="lyrics-text">sing</text>
-<text x="200.72" y="465.55" text-anchor="start" class="lyrics-text">in</text>
-<text x="241.83" y="465.55" text-anchor="start" class="lyrics-text">har-</text>
-<text x="282.94" y="465.55" text-anchor="start" class="lyrics-text">mo-</text>
-<text x="324.06" y="465.55" text-anchor="start" class="lyrics-text">ny!</text>
-<line x1="69.70" y1="365.94" x2="69.70" y2="464.85" class="barline"/>
-<line x1="234.15" y1="365.94" x2="234.15" y2="464.85" class="barline"/>
-<line x1="394.60" y1="365.94" x2="394.60" y2="464.85" class="barline"/>
-<line x1="398.60" y1="365.94" x2="398.60" y2="464.85" class="barline"/>
-<path d="M 66.50 365.94 Q 64.10 365.94 64.10 369.54 L 64.10 411.79 Q 64.10 415.39 61.70 415.39 Q 64.10 415.39 64.10 418.99 L 64.10 461.25 Q 64.10 464.85 66.50 464.85" class="brace"/>
-<text x="83.38" y="350.22" text-anchor="start" class="volta-label">2.</text>
-<line x1="77.38" y1="334.39" x2="398.60" y2="334.39" class="volta"/>
-<line x1="77.38" y1="334.39" x2="77.38" y2="350.22" class="volta"/>
+<text x="56.70" y="126.92" text-anchor="start" class="author-text">Daniel Batchellor</text>
+<text x="56.70" y="149.90" text-anchor="start" class="key-text">Do is G</text>
+<text x="109.15" y="149.90" text-anchor="start" class="time-text">4/4</text>
+<text x="140.83" y="149.90" text-anchor="start" class="tempo-label">adagio.</text>
+<g class="marker marker-segno" transform="translate(78.69 172.15) scale(3.4958)"><path transform="matrix(0.004,0,0,-0.004,1,1.5)" d="m -202,-50 c 0,17 13,30 30,30 17,0 30,-13 30,-30 0,-17 -13,-30 -30,-30 -17,0 -30,13 -30,30 z M 142,50 c 0,17 13,30 30,30 17,0 30,-13 30,-30 0,-17 -13,-30 -30,-30 -17,0 -30,13 -30,30 z M -35,-227 c 0,34 17,59 54,59 39,0 58,-31 58,-62 0,-27 -15,-55 -40,-64 8,-29 36,-51 69,-51 38,0 66,35 66,75 0,99 -83,168 -172,219 l -190,-324 -60,0 204,349 c -104,58 -204,132 -204,245 0,86 62,156 144,156 79,0 141,-68 141,-148 0,-34 -17,-59 -54,-59 -39,0 -58,31 -58,62 0,27 15,55 40,64 -8,29 -36,51 -69,51 -38,0 -66,-35 -66,-75 0,-99 83,-168 172,-219 l 190,324 60,0 L 46,26 c 104,-58 204,-132 204,-245 0,-86 -62,-156 -144,-156 -79,0 -141,68 -141,148 z" fill="#333333"/></g>
+<text x="82.18" y="200.50" text-anchor="middle" class="dynamic-label">f</text>
+<text x="722.00" y="200.50" text-anchor="end" class="jump-label">D.S.</text>
+<text x="248.59" y="280.00" text-anchor="middle" class="dynamic-label">p</text>
+<text x="82.18" y="228.93" text-anchor="middle" class="note-text">d</text>
+<text x="114.66" y="228.93" text-anchor="middle" class="divider-text">:</text>
+<text x="121.58" y="228.93" text-anchor="middle" class="note-text">t</text>
+<text x="127.87" y="233.46" text-anchor="middle" class="octave-text">1</text>
+<line x1="155.77" y1="215.57" x2="155.77" y2="231.57" class="medium-accent"/>
+<text x="164.41" y="228.93" text-anchor="middle" class="note-text">d</text>
+<text x="196.88" y="228.93" text-anchor="middle" class="divider-text">:</text>
+<text x="203.93" y="228.93" text-anchor="middle" class="note-text">r</text>
+<text x="248.59" y="228.93" text-anchor="middle" class="note-text">m</text>
+<text x="279.10" y="228.93" text-anchor="middle" class="divider-text">:</text>
+<text x="285.79" y="228.93" text-anchor="middle" class="note-text">f</text>
+<line x1="320.22" y1="215.57" x2="320.22" y2="231.57" class="medium-accent"/>
+<text x="330.82" y="228.93" text-anchor="middle" class="note-text">m</text>
+<text x="361.33" y="228.93" text-anchor="middle" class="divider-text">:</text>
+<text x="368.38" y="228.93" text-anchor="middle" class="note-text">r</text>
+<text x="411.08" y="228.93" text-anchor="middle" class="note-text">d</text>
+<text x="443.55" y="228.93" text-anchor="middle" class="divider-text">:</text>
+<text x="450.48" y="228.93" text-anchor="middle" class="note-text">t</text>
+<text x="456.77" y="233.46" text-anchor="middle" class="octave-text">1</text>
+<line x1="484.66" y1="215.57" x2="484.66" y2="231.57" class="medium-accent"/>
+<text x="493.30" y="228.93" text-anchor="middle" class="note-text">d</text>
+<text x="525.78" y="228.93" text-anchor="middle" class="divider-text">:</text>
+<text x="532.82" y="228.93" text-anchor="middle" class="note-text">r</text>
+<text x="577.49" y="228.93" text-anchor="middle" class="note-text">m</text>
+<text x="608.00" y="228.93" text-anchor="middle" class="divider-text">:</text>
+<text x="614.69" y="228.93" text-anchor="middle" class="note-text">f</text>
+<line x1="649.11" y1="215.57" x2="649.11" y2="231.57" class="medium-accent"/>
+<text x="659.71" y="228.93" text-anchor="middle" class="note-text">m</text>
+<text x="690.22" y="228.93" text-anchor="middle" class="divider-text">:</text>
+<text x="77.38" y="257.73" text-anchor="start" class="lyrics-text">Fol-</text>
+<text x="118.50" y="257.73" text-anchor="start" class="lyrics-text">low,</text>
+<text x="159.61" y="257.73" text-anchor="start" class="lyrics-text">me</text>
+<text x="200.72" y="257.73" text-anchor="start" class="lyrics-text">come</text>
+<text x="241.83" y="257.73" text-anchor="start" class="lyrics-text">Fol-</text>
+<text x="282.94" y="257.73" text-anchor="start" class="lyrics-text">low</text>
+<text x="324.06" y="257.73" text-anchor="start" class="lyrics-text">me,</text>
+<text x="365.17" y="257.73" text-anchor="start" class="lyrics-text">and</text>
+<text x="406.28" y="257.73" text-anchor="start" class="lyrics-text">we</text>
+<text x="447.39" y="257.73" text-anchor="start" class="lyrics-text">will</text>
+<text x="488.50" y="257.73" text-anchor="start" class="lyrics-text">sing</text>
+<text x="529.62" y="257.73" text-anchor="start" class="lyrics-text">in</text>
+<text x="570.73" y="257.73" text-anchor="start" class="lyrics-text">har-</text>
+<text x="611.84" y="257.73" text-anchor="start" class="lyrics-text">mo-</text>
+<text x="652.95" y="257.73" text-anchor="start" class="lyrics-text">ny.</text>
+<text x="114.66" y="305.21" text-anchor="middle" class="divider-text">:</text>
+<line x1="155.77" y1="291.85" x2="155.77" y2="307.85" class="medium-accent"/>
+<text x="196.88" y="305.21" text-anchor="middle" class="divider-text">:</text>
+<text x="246.63" y="305.21" text-anchor="middle" class="note-text">d</text>
+<text x="279.10" y="305.21" text-anchor="middle" class="divider-text">:</text>
+<text x="286.03" y="305.21" text-anchor="middle" class="note-text">t</text>
+<text x="292.32" y="309.75" text-anchor="middle" class="octave-text">1</text>
+<line x1="320.22" y1="291.85" x2="320.22" y2="307.85" class="medium-accent"/>
+<text x="328.86" y="305.21" text-anchor="middle" class="note-text">d</text>
+<text x="361.33" y="305.21" text-anchor="middle" class="divider-text">:</text>
+<text x="368.38" y="305.21" text-anchor="middle" class="note-text">r</text>
+<text x="413.04" y="305.21" text-anchor="middle" class="note-text">m</text>
+<text x="443.55" y="305.21" text-anchor="middle" class="divider-text">:</text>
+<text x="450.24" y="305.21" text-anchor="middle" class="note-text">f</text>
+<line x1="484.66" y1="291.85" x2="484.66" y2="307.85" class="medium-accent"/>
+<text x="495.26" y="305.21" text-anchor="middle" class="note-text">m</text>
+<text x="525.78" y="305.21" text-anchor="middle" class="divider-text">:</text>
+<text x="532.82" y="305.21" text-anchor="middle" class="note-text">r</text>
+<text x="575.53" y="305.21" text-anchor="middle" class="note-text">d</text>
+<text x="608.00" y="305.21" text-anchor="middle" class="divider-text">:</text>
+<text x="614.93" y="305.21" text-anchor="middle" class="note-text">t</text>
+<text x="621.22" y="309.75" text-anchor="middle" class="octave-text">1</text>
+<line x1="649.11" y1="291.85" x2="649.11" y2="307.85" class="medium-accent"/>
+<text x="657.75" y="305.21" text-anchor="middle" class="note-text">d</text>
+<text x="690.22" y="305.21" text-anchor="middle" class="divider-text">:</text>
+<text x="241.83" y="334.01" text-anchor="start" class="lyrics-text">We</text>
+<text x="282.94" y="334.01" text-anchor="start" class="lyrics-text">will</text>
+<text x="324.06" y="334.01" text-anchor="start" class="lyrics-text">fol-</text>
+<text x="365.17" y="334.01" text-anchor="start" class="lyrics-text">low</text>
+<text x="406.28" y="334.01" text-anchor="start" class="lyrics-text">we</text>
+<text x="447.39" y="334.01" text-anchor="start" class="lyrics-text">will</text>
+<text x="488.50" y="334.01" text-anchor="start" class="lyrics-text">sing</text>
+<text x="529.62" y="334.01" text-anchor="start" class="lyrics-text">in</text>
+<text x="570.73" y="334.01" text-anchor="start" class="lyrics-text">har-</text>
+<text x="611.84" y="334.01" text-anchor="start" class="lyrics-text">mo-</text>
+<text x="652.95" y="334.01" text-anchor="start" class="lyrics-text">ny.</text>
+<line x1="69.70" y1="215.57" x2="69.70" y2="333.31" class="barline"/>
+<line x1="234.15" y1="215.57" x2="234.15" y2="333.31" class="barline"/>
+<line x1="398.60" y1="215.57" x2="398.60" y2="333.31" class="barline"/>
+<line x1="563.05" y1="215.57" x2="563.05" y2="333.31" class="barline"/>
+<path d="M 66.50 215.57 Q 64.10 215.57 64.10 219.17 L 64.10 270.84 Q 64.10 274.44 61.70 274.44 Q 64.10 274.44 64.10 278.04 L 64.10 329.71 Q 64.10 333.31 66.50 333.31" class="brace"/>
+<path d="M 727.50 215.57 Q 729.90 215.57 729.90 219.17 L 729.90 270.84 Q 729.90 274.44 732.30 274.44 Q 729.90 274.44 729.90 278.04 L 729.90 329.71 Q 729.90 333.31 727.50 333.31" class="brace"/>
+<text x="411.78" y="200.50" text-anchor="start" class="volta-label">1.</text>
+<line x1="406.28" y1="185.99" x2="406.28" y2="200.50" class="volta"/>
+<line x1="727.50" y1="185.99" x2="727.50" y2="200.50" class="volta"/>
+<line x1="406.28" y1="185.99" x2="727.50" y2="185.99" class="volta"/>
+<text x="82.18" y="394.80" text-anchor="middle" class="note-text">d</text>
+<text x="114.66" y="394.80" text-anchor="middle" class="divider-text">:</text>
+<text x="121.58" y="394.80" text-anchor="middle" class="note-text">t</text>
+<text x="127.87" y="399.34" text-anchor="middle" class="octave-text">1</text>
+<line x1="155.77" y1="381.44" x2="155.77" y2="397.44" class="medium-accent"/>
+<text x="164.41" y="394.80" text-anchor="middle" class="note-text">d</text>
+<text x="196.88" y="394.80" text-anchor="middle" class="divider-text">:</text>
+<text x="203.93" y="394.80" text-anchor="middle" class="note-text">r</text>
+<text x="248.59" y="394.80" text-anchor="middle" class="note-text">m</text>
+<text x="279.10" y="394.80" text-anchor="middle" class="divider-text">:</text>
+<text x="285.79" y="394.80" text-anchor="middle" class="note-text">f</text>
+<line x1="320.22" y1="381.44" x2="320.22" y2="397.44" class="medium-accent"/>
+<text x="330.82" y="394.80" text-anchor="middle" class="note-text">m</text>
+<text x="361.33" y="394.80" text-anchor="middle" class="divider-text">:</text>
+<text x="368.96" y="394.80" text-anchor="middle" class="note-text">-</text>
+<text x="77.38" y="423.60" text-anchor="start" class="lyrics-text">we</text>
+<text x="118.50" y="423.60" text-anchor="start" class="lyrics-text">will</text>
+<text x="159.61" y="423.60" text-anchor="start" class="lyrics-text">sing</text>
+<text x="200.72" y="423.60" text-anchor="start" class="lyrics-text">in</text>
+<text x="241.83" y="423.60" text-anchor="start" class="lyrics-text">har-</text>
+<text x="282.94" y="423.60" text-anchor="start" class="lyrics-text">mo-</text>
+<text x="324.06" y="423.60" text-anchor="start" class="lyrics-text">ny.</text>
+<text x="84.14" y="452.26" text-anchor="middle" class="note-text">m</text>
+<text x="114.66" y="452.26" text-anchor="middle" class="divider-text">:</text>
+<text x="121.34" y="452.26" text-anchor="middle" class="note-text">f</text>
+<line x1="155.77" y1="438.90" x2="155.77" y2="454.90" class="medium-accent"/>
+<text x="166.37" y="452.26" text-anchor="middle" class="note-text">m</text>
+<text x="196.88" y="452.26" text-anchor="middle" class="divider-text">:</text>
+<text x="203.93" y="452.26" text-anchor="middle" class="note-text">r</text>
+<text x="246.63" y="452.26" text-anchor="middle" class="note-text">d</text>
+<text x="279.10" y="452.26" text-anchor="middle" class="divider-text">:</text>
+<text x="286.03" y="452.26" text-anchor="middle" class="note-text">t</text>
+<text x="292.32" y="456.79" text-anchor="middle" class="octave-text">1</text>
+<line x1="320.22" y1="438.90" x2="320.22" y2="454.90" class="medium-accent"/>
+<text x="328.86" y="452.26" text-anchor="middle" class="note-text">d</text>
+<text x="361.33" y="452.26" text-anchor="middle" class="divider-text">:</text>
+<text x="368.96" y="452.26" text-anchor="middle" class="note-text">-</text>
+<text x="77.38" y="481.05" text-anchor="start" class="lyrics-text">we</text>
+<text x="118.50" y="481.05" text-anchor="start" class="lyrics-text">will</text>
+<text x="159.61" y="481.05" text-anchor="start" class="lyrics-text">sing</text>
+<text x="200.72" y="481.05" text-anchor="start" class="lyrics-text">in</text>
+<text x="241.83" y="481.05" text-anchor="start" class="lyrics-text">har-</text>
+<text x="282.94" y="481.05" text-anchor="start" class="lyrics-text">mo-</text>
+<text x="324.06" y="481.05" text-anchor="start" class="lyrics-text">ny!</text>
+<line x1="69.70" y1="381.44" x2="69.70" y2="480.35" class="barline"/>
+<line x1="234.15" y1="381.44" x2="234.15" y2="480.35" class="barline"/>
+<line x1="394.60" y1="381.44" x2="394.60" y2="480.35" class="barline"/>
+<line x1="398.60" y1="381.44" x2="398.60" y2="480.35" class="barline"/>
+<path d="M 66.50 381.44 Q 64.10 381.44 64.10 385.04 L 64.10 427.30 Q 64.10 430.90 61.70 430.90 Q 64.10 430.90 64.10 434.50 L 64.10 476.75 Q 64.10 480.35 66.50 480.35" class="brace"/>
+<text x="82.88" y="366.37" text-anchor="start" class="volta-label">2.</text>
+<line x1="77.38" y1="351.86" x2="77.38" y2="366.37" class="volta"/>
+<line x1="77.38" y1="351.86" x2="398.60" y2="351.86" class="volta"/>
 </svg>

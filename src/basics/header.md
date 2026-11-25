@@ -16,4 +16,4 @@ The header is declarative: it describes the score, but it does not contain notes
 - [Metadata](./header/metadata.md) describes the score itself, such as its title, author, and language.
 - [Parameters](./header/parameters.md) set the initial key, time signature, tempo, and voices.
 
-Compiler and styling directives are also placed in the header, but are documented separately under [Directives](./directives.md).
+Compiler and styling directives are also placed in the header. They are documented separately under [Directives](./directives.md) and [Styling](./styling.md).

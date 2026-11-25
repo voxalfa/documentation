@@ -9,9 +9,9 @@
 
 [$] key={G} | time={4,4} | tempo={adagio} | voices={S,A}
 
-;; @title-text margin-bottom={20}
-;; @note-text font-size={16}
-;; @lyrics-text font-size={14} | color="#333333"
+;; @style name="title-text" | margin-bottom={20}
+;; @style name="note-text" | font-size={16}
+;; @style name="lyrics-text" | font-size={14} | color="#333333"
 
 ---
 
